@@ -1,0 +1,1108 @@
+{
+  "message": "",
+  "result": {
+    "title": "Trang chủ",
+    "description": "Thaco Truck",
+    "meta": {
+      "image": "https://thacotai.vn/storage/logo/logo-2024/apdung-logo-truyenthong-web-truck-chinh.jpg"
+    },
+    "icon": "https://thacotai.vn/storage/logo/logo-2024/apdung-logo-truyenthong-web-favicon.jpg",
+    "captcha_site_key": "\u003Cscript src=\"https://www.google.com/recaptcha/api.js?hl=vi\" async defer\u003E\u003C/script\u003E\u003Cscript\u003E\"use strict\"; var refreshRecaptcha = function () { grecaptcha.reset(); };\u003C/script\u003E\u003Cdiv class=\"g-recaptcha\"  theme=\"light\" id=\"buzzNoCaptchaId_02110cbe60d380cf42fcb71d0b8fa524\" data-sitekey=\"6LflrlIiAAAAAE1b5mCeFrAGQS-6EpJnmo0FmVhn\"\u003E\u003C/div\u003E",
+    "content": "\u003Cp\u003E--\u003C/p\u003E",
+    "components": [
+      {
+        "name": "Banner",
+        "component": "the-banner",
+        "data": {
+          "simple_slide": [
+            {
+              "id": 1367,
+              "simple_slider_id": 10,
+              "title": null,
+              "image": "https://thacotai.vn/storage/1920x1080-lineup-linker.jpg",
+              "link": null,
+              "description": null,
+              "order": 0,
+              "created_at": "2025-03-06T07:57:45.000000Z",
+              "updated_at": "2025-06-19T06:30:44.000000Z",
+              "image_mb": "https://thacotai.vn/storage/banner/banner-trang-chu/banner-web-linker-sp.jpg",
+              "link_youtube": null,
+              "is_featured": 0,
+              "status": "published",
+              "video_mb": null
+            },
+            {
+              "id": 1286,
+              "simple_slider_id": 10,
+              "title": null,
+              "image": "https://thacotai.vn/storage/tai/banner/1920x1080-lineup-thacotruck.jpg",
+              "link": null,
+              "description": null,
+              "order": 1,
+              "created_at": "2024-03-06T04:32:45.000000Z",
+              "updated_at": "2025-04-19T06:34:13.000000Z",
+              "image_mb": "https://thacotai.vn/storage/banner/banner-trang-chu/banner-web-kia-sp.jpg",
+              "link_youtube": null,
+              "is_featured": 0,
+              "status": "published",
+              "video_mb": null
+            },
+            {
+              "id": 1179,
+              "simple_slider_id": 10,
+              "title": null,
+              "image": "https://thacotai.vn/storage/tai/banner/1920x1080-lineup-kia-frontier.jpg",
+              "link": null,
+              "description": null,
+              "order": 2,
+              "created_at": "2024-01-12T01:53:36.000000Z",
+              "updated_at": "2025-04-19T06:37:27.000000Z",
+              "image_mb": "https://thacotai.vn/storage/banner/banner-trang-chu/banner-web-fuso-sp.jpg",
+              "link_youtube": null,
+              "is_featured": 0,
+              "status": "pending",
+              "video_mb": null
+            },
+            {
+              "id": 1177,
+              "simple_slider_id": 10,
+              "title": null,
+              "image": "https://thacotai.vn/storage/banner/banner-trang-chu/1920x1080-lineup-howo-1.jpg",
+              "link": null,
+              "description": null,
+              "order": 4,
+              "created_at": "2024-01-11T04:10:58.000000Z",
+              "updated_at": "2025-04-23T06:59:09.000000Z",
+              "image_mb": "https://thacotai.vn/storage/banner/banner-trang-chu/banner-web-howo-sp-1.jpg",
+              "link_youtube": null,
+              "is_featured": 0,
+              "status": "published",
+              "video_mb": null
+            }
+          ],
+          "banner_status": "1",
+          "banner_screen": "all",
+          "banner_title": "all",
+          "pagination": "desktop",
+          "full_screen": "0"
+        }
+      },
+      {
+        "name": "Danh sách sản phẩm",
+        "component": "featured-products",
+        "data": {
+          "brands": [
+            {
+              "id": 6,
+              "name": "THACO TRUCK",
+              "slug": "thaco-truck",
+              "image": "https://thacotai.vn/storage/logo/apdung-logo-truyenthong-web-truck-phancap.jpg",
+              "link": null,
+              "slideProduct": [
+                {
+                  "id": 257,
+                  "name": "TF230",
+                  "slug": "thaco-tf230",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "0.99 tấn"
+                    },
+                    {
+                      "title": "Chiều dài thùng",
+                      "value": "2.8 m"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/hinh-chi-tiet-san-pham/tf230/banner/hdd-tf230-1.png",
+                  "weight": 0.99,
+                  "price": 219000000
+                },
+                {
+                  "id": 256,
+                  "name": "THACO LINKER T2-24",
+                  "slug": "thaco-linker-t2-24",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "14,7 Tấn"
+                    },
+                    {
+                      "title": "Chiều dài thùng",
+                      "value": "9,9 m"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/hinh-chi-tiet-san-pham/linker/linker-24/hdd-linker-t2-24.png",
+                  "weight": 14.7,
+                  "price": null
+                },
+                {
+                  "id": 255,
+                  "name": "THACO LINKER T3-16",
+                  "slug": "thaco-linker-t3-16",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "8,6 tấn"
+                    },
+                    {
+                      "title": "Thể tích thùng",
+                      "value": "7 m³"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/hinh-chi-tiet-san-pham/xe-ben-linker/t3-16/hdd-linker-t3-16.png",
+                  "weight": 8.6,
+                  "price": null
+                },
+                {
+                  "id": 254,
+                  "name": "THACO LINKER T3-12",
+                  "slug": "thaco-linker-t3-12",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "7,5 tấn"
+                    },
+                    {
+                      "title": "Thể tích thùng",
+                      "value": "6 m³"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/hinh-chi-tiet-san-pham/xe-ben-linker/t3-12/hdd-linker-t3-12.png",
+                  "weight": 7.5,
+                  "price": null
+                },
+                {
+                  "id": 253,
+                  "name": "THACO LINKER T3-9.0",
+                  "slug": "thaco-linker-t3-90",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "4,99 tấn"
+                    },
+                    {
+                      "title": "Thể tích thùng",
+                      "value": "4 m³"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/hinh-chi-tiet-san-pham/xe-ben-linker/t3-90/hdd-linker-t390.png",
+                  "weight": 4.99,
+                  "price": null
+                },
+                {
+                  "id": 252,
+                  "name": "THACO LINKER T3-6.5",
+                  "slug": "thaco-linker-t3-65",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "3,49 tấn"
+                    },
+                    {
+                      "title": "Thể tích thùng",
+                      "value": "2,9 m³"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/hinh-chi-tiet-san-pham/xe-ben-linker/t3-65/hdd-linker-t3-65.png",
+                  "weight": 3.49,
+                  "price": null
+                }
+              ]
+            },
+            {
+              "id": 8,
+              "name": "KIA",
+              "slug": "kia",
+              "image": "https://thacotruck.com.vn/backend/storage/logo/logo-kia-2-3.png",
+              "link": null,
+              "slideProduct": [
+                {
+                  "id": 232,
+                  "name": "KIA FRONTIER K250",
+                  "slug": "kia-frontier-k250-1",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "2.49 tấn"
+                    },
+                    {
+                      "title": "Chiều dài thùng",
+                      "value": "3.5 m"
+                    },
+                    {
+                      "title": "Dịch vụ 24/7",
+                      "value": "76 xưởng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/banner/kia-frontier/k250/k250-l-11zon.png",
+                  "weight": 2.49,
+                  "price": 400000000
+                },
+                {
+                  "id": 231,
+                  "name": "KIA FRONTIER K200SD-4WD",
+                  "slug": "kia-frontier-k200sd-4wd-1",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "1.49 tấn"
+                    },
+                    {
+                      "title": "Chiều dài thùng",
+                      "value": "1.750 m"
+                    },
+                    {
+                      "title": "Dịch vụ 24/7",
+                      "value": "76 xưởng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/kia/kia-e5/k200sd-4wd/banner-hdd-tai-web-kia-2024-k200sd.png",
+                  "weight": 1.49,
+                  "price": 429000000
+                },
+                {
+                  "id": 230,
+                  "name": "KIA FRONTIER K200S",
+                  "slug": "kia-frontier-k200s",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "1.49 tấn"
+                    },
+                    {
+                      "title": "Chiều dài thùng",
+                      "value": "2.85 m"
+                    },
+                    {
+                      "title": "Dịch vụ 24/7",
+                      "value": "76 xưởng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/kia/kia-e5/k200s/banner-hdd-tai-web-kia-2024-k200s.png",
+                  "weight": 1.49,
+                  "price": 359000000
+                },
+                {
+                  "id": 229,
+                  "name": "KIA FRONTIER K200",
+                  "slug": "kia-frontier-k200",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "1.99 tấn"
+                    },
+                    {
+                      "title": "Chiều dài thùng",
+                      "value": "3.2 m"
+                    },
+                    {
+                      "title": "Dịch vụ 24/7",
+                      "value": "76 xưởng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/kia/kia-e5/k200/banner-hdd-tai-web-kia-2024-k200-1.png",
+                  "weight": 1.99,
+                  "price": 400000000
+                },
+                {
+                  "id": 228,
+                  "name": "KIA FRONTIER K200S-4WD",
+                  "slug": "kia-frontier-k200s-4wd-1",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "1.49 tấn"
+                    },
+                    {
+                      "title": "Chiều dài thùng",
+                      "value": "2.85 m"
+                    },
+                    {
+                      "title": "Dịch vụ 24/7",
+                      "value": "76 xưởng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/kia/kia-e5/k200s-4wd/banner-hdd-tai-web-kia-2024-k200s-4wd.png",
+                  "weight": 1.49,
+                  "price": 429000000
+                },
+                {
+                  "id": 220,
+                  "name": "Xe đông lạnh Kia Frontier K250L",
+                  "slug": "xe-dong-lanh-kia-frontier-k250l-dl1",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "1.99 tấn"
+                    },
+                    {
+                      "title": "Thể tích thùng",
+                      "value": "11.4 m3"
+                    },
+                    {
+                      "title": "Dịch vụ 24/7",
+                      "value": "79 xưởng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/xe-chuyen-dung/xe-dong-lanh-k250l-dl1/hinhdd-xechuyendung-k250l-dl.png",
+                  "weight": 1.99,
+                  "price": null
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "name": "MITSUBISHI FUSO",
+              "slug": "mitsubishi-fuso",
+              "image": "https://thacotai.vn/storage/logo/logo-san-pham/untitled-1-03-2.png",
+              "link": null,
+              "slideProduct": [
+                {
+                  "id": 213,
+                  "name": "Xe đông lạnh Mitsubishi Fuso Canter TF7.5 DL1",
+                  "slug": "xe-dong-lanh-mitsubishi-fuso-canter-tf75-dl1",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "3.49 tấn"
+                    },
+                    {
+                      "title": "Thể tích thùng",
+                      "value": "20,53 m3"
+                    },
+                    {
+                      "title": "Dịch vụ 24/7",
+                      "value": "79 xưởng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/xe-chuyen-dung/xe-dong-lanh-fuso-tf75/hdd-canter-tf75-dl1.png",
+                  "weight": 3.49,
+                  "price": null
+                },
+                {
+                  "id": 212,
+                  "name": "Xe thùng kín cánh dơi MITSUBISHI FUSO CANTER TF7.5",
+                  "slug": "xe-thung-kin-canh-doi-fuso-canter",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "3.1 tấn"
+                    },
+                    {
+                      "title": "Chiều dài thùng",
+                      "value": "5.2 m"
+                    },
+                    {
+                      "title": "Dịch vụ 24/7",
+                      "value": "79 xưởng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/xe-chuyen-dung/xe-canh-doi-fuso-canter-tf75/hinhdd-xechuyendung-canhdoi-tf75.png",
+                  "weight": 3.1,
+                  "price": null
+                },
+                {
+                  "id": 198,
+                  "name": "Xe đông lạnh Mitsubishi Fuso Canter TF4.9 DL2",
+                  "slug": "xe-dong-lanh-fuso",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "1,85 tấn"
+                    },
+                    {
+                      "title": "Thể tích thùng",
+                      "value": "13,5 m3"
+                    },
+                    {
+                      "title": "Dịch vụ 24/7",
+                      "value": "79 xưởng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/xe-chuyen-dung/xe-dl-fuso-canter-tf75/hdd-tf-49-carrier.png",
+                  "weight": 1.85,
+                  "price": null
+                },
+                {
+                  "id": 100,
+                  "name": "Fuso FI170L",
+                  "slug": "mitsubishi-fuso-fi-170l",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "8.2 tấn"
+                    },
+                    {
+                      "title": "Chiều dài thùng",
+                      "value": "6.85 m"
+                    },
+                    {
+                      "title": "Dịch vụ 24/7",
+                      "value": "76 xưởng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/fuso/fuso-fi170l/hdd-fi170l.png",
+                  "weight": 8.2,
+                  "price": 859000000
+                },
+                {
+                  "id": 99,
+                  "name": "Fuso FA140L",
+                  "slug": "mitsubishi-fuso-fa-140l",
+                  "promotion": null,
+                  "promotion_link": "#",
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "6.45 tấn"
+                    },
+                    {
+                      "title": "Chiều dài thùng",
+                      "value": "6.1 m"
+                    },
+                    {
+                      "title": "Dịch vụ 24/7",
+                      "value": "76 xưởng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/fuso/fuso-fa/fa-140l/hdd-fuso-fa140l.png",
+                  "weight": 6.45,
+                  "price": 729000000
+                },
+                {
+                  "id": 89,
+                  "name": "Xe đông lạnh Mitsubishi Fuso Canter TF4.9",
+                  "slug": "xe-dong-lanh-mitsubishi-fuso-canter-499",
+                  "promotion": null,
+                  "promotion_link": "#",
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "1,8 tấn"
+                    },
+                    {
+                      "title": "Thể tích thùng",
+                      "value": "13,5 m3"
+                    },
+                    {
+                      "title": "Dịch vụ 24/7",
+                      "value": "79 xưởng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/xe-chuyen-dung/xe-dl-fuso-can-ter-tf49-dl1/hdd-tf49-thermal-master.png",
+                  "weight": 1.85,
+                  "price": null
+                }
+              ]
+            },
+            {
+              "id": 9,
+              "name": "SINOTRUK",
+              "slug": "sinotruk",
+              "image": "https://thacotruck.com.vn/backend/storage/logo/logo-sinotruck2-1.png",
+              "link": null,
+              "slideProduct": [
+                {
+                  "id": 248,
+                  "name": "SINOTRUK 6x4",
+                  "slug": "sinotruk-6x4",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "14,735 Tấn"
+                    },
+                    {
+                      "title": "Khối lượng kéo theo",
+                      "value": "38,735 Tấn"
+                    },
+                    {
+                      "title": "Dịch vụ 24/7",
+                      "value": "76 xưởng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/hinh-chi-tiet-san-pham/sinotruk/hdd-howo-max-1.png",
+                  "weight": null,
+                  "price": null
+                },
+                {
+                  "id": 247,
+                  "name": "SINOTRUK 4x2",
+                  "slug": "sinotruk-4x2",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "9,63 Tấn"
+                    },
+                    {
+                      "title": "Khối lượng kéo theo",
+                      "value": "33,63 Tấn"
+                    },
+                    {
+                      "title": "Dịch vụ 24/7",
+                      "value": "76 xưởng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/hinh-chi-tiet-san-pham/sinotruk/hdd-howo-nx-1.png",
+                  "weight": 9.63,
+                  "price": null
+                },
+                {
+                  "id": 124,
+                  "name": "HOWO TX D800",
+                  "slug": "howo-tx-d800",
+                  "promotion": null,
+                  "promotion_link": "#",
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "12.72 tấn"
+                    },
+                    {
+                      "title": "Thùng ben",
+                      "value": "10.6 khối"
+                    },
+                    {
+                      "title": "Dịch vụ 24/7",
+                      "value": "76 xưởng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/sinotruck/tx-800/tx-d800-800x800px.png",
+                  "weight": 12.72,
+                  "price": 1659000000
+                },
+                {
+                  "id": 43,
+                  "name": "HOWO TX D600",
+                  "slug": "tx-d600",
+                  "promotion": null,
+                  "promotion_link": "#",
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "8.77 tấn"
+                    },
+                    {
+                      "title": "Thùng ben",
+                      "value": "7.3 khối"
+                    },
+                    {
+                      "title": "Dịch vụ 24/7",
+                      "value": "76 xưởng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/sinotruck/tx-600/tx-d600-800x800px.png",
+                  "weight": 8.77,
+                  "price": 1529000000
+                }
+              ]
+            },
+            {
+              "id": 10,
+              "name": "XE CHUYÊN DỤNG",
+              "slug": "xe-chuyen-dung",
+              "image": "https://thacotruck.com.vn/backend/storage/logo/logo-san-pham/untitled-1-06-4.png",
+              "link": null,
+              "slideProduct": [
+                {
+                  "id": 216,
+                  "name": "Xe đông lạnh Mitsubishi Fuso FA140L - DL2",
+                  "slug": "xe-dong-lanh-mitsubishi-fuso-fa140l-dl2-1",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "5.7 tấn"
+                    },
+                    {
+                      "title": "Thể tích thùng",
+                      "value": "26.23 m3"
+                    },
+                    {
+                      "title": "Dịch vụ 24/7",
+                      "value": "79 xưởng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/xe-chuyen-dung/xe-dong-lanh-fa140l-dl2-1/hdd-fa140l-dl2.png",
+                  "weight": 5.7,
+                  "price": null
+                },
+                {
+                  "id": 215,
+                  "name": "Xe đông lạnh Mitsubishi Fuso FA140 - DL2",
+                  "slug": "xe-dong-lanh-mitsubishi-fuso-fa140l-dl2",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "6.3 tấn"
+                    },
+                    {
+                      "title": "Thể tích thùng",
+                      "value": "24.3"
+                    },
+                    {
+                      "title": "Dịch vụ 24/7",
+                      "value": "79 xưởng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/xe-chuyen-dung/xe-dong-lanh-fa140l-dl2/hdd-fa140-dl2.png",
+                  "weight": 6.3,
+                  "price": null
+                },
+                {
+                  "id": 211,
+                  "name": "Xe phun nước rửa đường Auman ETX D300-PN1",
+                  "slug": "xe-phun-nuoc-rua-duong-auman-etx-d300",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "15 tấn"
+                    },
+                    {
+                      "title": "Chiều dài thùng",
+                      "value": "5.75m"
+                    },
+                    {
+                      "title": "Dịch vụ 24/7",
+                      "value": "79 xưởng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/xe-chuyen-dung/xe-phun-nuoc-auman-etx-d300/hinhdd-xechuyendung-d300-ruaduong.png",
+                  "weight": 15,
+                  "price": null
+                },
+                {
+                  "id": 210,
+                  "name": "Xe chở gia súc AUMAN EST C300-GS1",
+                  "slug": "xe-cho-gia",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "12 tấn"
+                    },
+                    {
+                      "title": "Chiều dài thùng",
+                      "value": "9.57m"
+                    },
+                    {
+                      "title": "Dịch vụ 24/7",
+                      "value": "79 xưởng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/xe-chuyen-dung/xe-cho-gia-suc-auman-est-c300-gs1/hdd-auman-est-c300-gs1.png",
+                  "weight": 12,
+                  "price": null
+                },
+                {
+                  "id": 209,
+                  "name": "Xe thùng kín cánh dơi Auman C240-CD1",
+                  "slug": "xe-1",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "12.7 tấn"
+                    },
+                    {
+                      "title": "Chiều dài thùng",
+                      "value": "9,48 m"
+                    },
+                    {
+                      "title": "Dịch vụ 24/7",
+                      "value": "79 xưởng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/xe-chuyen-dung/canh-doi-auman-c240-cd1/hinhdd-xechuyendung-canhdoi-auman-c240.png",
+                  "weight": 12.7,
+                  "price": null
+                },
+                {
+                  "id": 208,
+                  "name": "Xe chở Pallet Auman C160L-LK1",
+                  "slug": "xe-cho-pallet",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "6.7 tấn"
+                    },
+                    {
+                      "title": "Chiều dài thùng",
+                      "value": "9.8m"
+                    },
+                    {
+                      "title": "Dịch vụ 24/7",
+                      "value": "79 xưởng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/xe-chuyen-dung/xe-cho-pallet-auman-c160l-lk1/hinhdd-xechuyendung-lkdt-c160l.png",
+                  "weight": 6.7,
+                  "price": null
+                }
+              ]
+            },
+            {
+              "id": 11,
+              "name": "SƠ MI RƠ MOOC",
+              "slug": "so-mi-ro-mooc",
+              "image": "https://thacotai.vn/storage/logo/1692774050587.jpg",
+              "link": null,
+              "slideProduct": [
+                {
+                  "id": 227,
+                  "name": "SMRM XƯƠNG CỔ CÒ 3 TRỤC 45 FEET 6 KHÓA",
+                  "slug": "smrm-xuongcc-3t6k45f",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "34.25 tấn"
+                    },
+                    {
+                      "title": "Chiều dài móc",
+                      "value": "13.9 m"
+                    },
+                    {
+                      "title": "Dịch vụ 24/7",
+                      "value": "79 xưởng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/smrm/smrm-xuong-co-co/3t6k45f/hinhdd-smrm-xuongcc-3t6k45f-1.png",
+                  "weight": 33.2,
+                  "price": null
+                },
+                {
+                  "id": 226,
+                  "name": "SMRM XƯƠNG 3 TRỤC 20 FEET 4 KHÓA",
+                  "slug": "smrm-xuong-3t4k20f",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "33.70 tấn"
+                    },
+                    {
+                      "title": "Chiều dài móc",
+                      "value": "10.670 mm"
+                    },
+                    {
+                      "title": "Dịch vụ 24/7",
+                      "value": "79 xưởng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/smrm/smrm-xuong-thang/3t4k20f/hinhdd-smrm-xuongthang-3t4k20f-1.png",
+                  "weight": 33.7,
+                  "price": null
+                },
+                {
+                  "id": 225,
+                  "name": "SMRM XƯƠNG 3 TRỤC 45 FEET 12 KHÓA",
+                  "slug": "smrm-xuong-3t12k45f",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "26.71 tấn"
+                    },
+                    {
+                      "title": "Chiều dài móc",
+                      "value": "13.780 mm"
+                    },
+                    {
+                      "title": "Dịch vụ 24/7",
+                      "value": "79 xưởng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/smrm/smrm-xuong-thang/3t12k45f/hinhdd-smrm-xuongthang-3t12k45f.png",
+                  "weight": 26.71,
+                  "price": null
+                },
+                {
+                  "id": 190,
+                  "name": "SMRM XƯƠNG 2 TRỤC 40 FEET 8 KHÓA",
+                  "slug": "smrm-xuong-2t8k40f-1",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "27.81 tấn"
+                    },
+                    {
+                      "title": "Chiều dài móc",
+                      "value": "12.25 m"
+                    },
+                    {
+                      "title": "Dịch vụ 24/7",
+                      "value": "79 xưởng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/smrm/smrm-xuong-thang/2t8k40f/smrm-xuongthang-2t8k40f.png",
+                  "weight": 27.81,
+                  "price": null
+                },
+                {
+                  "id": 189,
+                  "name": "SMRM XƯƠNG 3 TRỤC 40 FEET 8 KHÓA",
+                  "slug": "smrm-xuong-3t8k40f-1",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "33.26 tấn"
+                    },
+                    {
+                      "title": "Chiều dài móc",
+                      "value": "12.25 m"
+                    },
+                    {
+                      "title": "Dịch vụ 24/7",
+                      "value": "79 xưởng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/smrm/smrm-xuong-thang/3t8k40f/hinhdd-smrm-xuongthang-3t8k40f-1.png",
+                  "weight": 33.26,
+                  "price": null
+                },
+                {
+                  "id": 187,
+                  "name": "SMRM XƯƠNG 3 TRỤC 40 FEET 12 KHÓA",
+                  "slug": "smrm-3t12k40f-1",
+                  "promotion": null,
+                  "promotion_link": "#",
+                  "basic_specification": [
+                    {
+                      "title": "Tải trọng",
+                      "value": "32.8 tấn"
+                    },
+                    {
+                      "title": "Chiều dài móc",
+                      "value": "12.25 m"
+                    },
+                    {
+                      "title": "Dịch vụ 24/7",
+                      "value": "79 xưởng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/smrm/smrm-xuong-thang/3t12k40f/hdd-smrm-xuongthang-3t12k40f.png",
+                  "weight": 32.8,
+                  "price": null
+                }
+              ]
+            }
+          ],
+          "activeTab": 0
+        }
+      },
+      {
+        "name": "Danh sách tin tức",
+        "component": "slide-news",
+        "data": {
+          "list_news": [
+            {
+              "id": 417,
+              "name": "BÀN GIAO LÔ XE KIA FRONTIER K200S-4WD CHO CÔNG TY TNHH VÀNG PHƯỚC SƠN",
+              "slug": "ban-giao-lo-xe-kia-frontier-k200s-4wd-cho-cong-ty-tnhh-vang-phuoc-son",
+              "description": "Vừa qua, tại showroom THACO Truck & Bus Tam Kỳ – THACO AUTO Đà Nẵng đã diễn ra lễ bàn giao lô xe KIA Frontier K200S-4WD cho Công ty TNHH Vàng Phước Sơn – doanh nghiệp uy tín trong lĩnh vực khai thác khoáng sản.",
+              "image": "https://thacotai.vn/storage/hinh-anh-ban-giao-xe/cty-vang-phuoc-son/bgx-k200s-vangphuocson-hdd.jpg",
+              "image_featured": "https://thacotai.vn/storage/hinh-anh-ban-giao-xe/cty-vang-phuoc-son/bgx-k200s-vangphuocson-vuong.jpg",
+              "created_at": "19-09",
+              "created_at_year": "2025",
+              "created_at_mb": "19/09/2025",
+              "created_at_service": "19/09/2025 05:00:00 PM"
+            },
+            {
+              "id": 416,
+              "name": "BÀN GIAO LÔ XE THACO LINKER T2-6.5 PHIÊN BẢN TẬP LÁI CHO TRUNG TÂM GIÁO DỤC NGHỀ NGHIỆP ĐÀO TẠO LÁI XE ĐÀ NẴNG STC",
+              "slug": "ban-giao-lo-xe-thaco-linker-t2-65-phien-ban-tap-lai-cho-trung-tam-giao-duc-nghe-nghiep-dao-tao-lai-xe-da-nang-stc",
+              "description": "Vừa qua, THACO AUTO Đà Nẵng đã bàn giao lô xe THACO Linker T2-6.5 phiên bản tập lái cho Trung tâm Giáo dục Nghề nghiệp Đào tạo Lái xe Đà Nẵng STC - Công ty Cổ phần Vận tải Ôtô và Dịch vụ Tổng hợp Đà Nẵng.",
+              "image": "https://thacotai.vn/storage/hinh-anh-ban-giao-xe/cty-stc/bgx-t265-stc-hdd.jpg",
+              "image_featured": "https://thacotai.vn/storage/hinh-anh-ban-giao-xe/cty-stc/bgx-t265-stc-vuong.jpg",
+              "created_at": "19-09",
+              "created_at_year": "2025",
+              "created_at_mb": "19/09/2025",
+              "created_at_service": "19/09/2025 01:30:00 PM"
+            },
+            {
+              "id": 415,
+              "name": "THACO LINKER T2-12 - LỰA CHỌN HÀNG ĐẦU CHO DOANH NGHIỆP VẬN TẢI, LOGISTICS CHUYÊN NGHIỆP",
+              "slug": "thaco-linker-t2-12-lua-chon-hang-dau-cho-doanh-nghiep-van-tai-logistics-chuyen-nghiep",
+              "description": "Sự phát triển mạnh mẽ của thương mại điện tử đang đặt ra thách thức lớn cho các doanh nghiệp vận tải, logistics chuyên nghiệp trong việc vừa đảm bảo hiệu quả khai thác, vừa tối ưu chi phí. Thấu hiểu thực tế đó, THACO AUTO giới thiệu THACO Linker T2-12 với thiết kế hiện đại, thùng hàng thể tích lớn, nhiều tùy chọn kích thước và tải trọng, cùng khả năng vận hành mạnh mẽ, bền bỉ.",
+              "image": "https://thacotai.vn/storage/thaco-linker-t2-12/bv-linker-t212-hdd.jpg",
+              "image_featured": "https://thacotai.vn/storage/thaco-linker-t2-12/bv-linker-t212-vuong.jpg",
+              "created_at": "17-09",
+              "created_at_year": "2025",
+              "created_at_mb": "17/09/2025",
+              "created_at_service": "17/09/2025 10:29:00 AM"
+            },
+            {
+              "id": 414,
+              "name": "BÀN GIAO LÔ XE ĐẦU KÉO SINOTRUK CHO CÔNG TY TNHH VẬN TẢI HOA LƯ",
+              "slug": "ban-giao-lo-xe-dau-keo-sinotruk-cho-cong-ty-tnhh-van-tai-hoa-lu",
+              "description": "Ngày 10/9/2025, tại Showroom THACO Truck & Bus Dĩ An – THACO AUTO TP.HCM đã diễn ra lễ bàn giao lô xe đầu kéo SINOTRUK 6x4 cho Công ty TNHH Vận Tải Hoa Lư, mở ra bước hợp tác mới giữa hai doanh nghiệp.",
+              "image": "https://thacotai.vn/storage/bgx-sinotruk-hoalu-hdd.jpg",
+              "image_featured": "https://thacotai.vn/storage/bgx-sinotruk-hoalu-vuong.jpg",
+              "created_at": "13-09",
+              "created_at_year": "2025",
+              "created_at_mb": "13/09/2025",
+              "created_at_service": "13/09/2025 08:20:06 AM"
+            },
+            {
+              "id": 413,
+              "name": "BÀN GIAO LÔ XE THACO LINKER T2-6.5 PHIÊN BẢN TẬP LÁI CHO CÔNG TY TNHH PHÚC HOÀNG NGÂN",
+              "slug": "ban-giao-lo-xe-thaco-linker-t2-65-phien-ban-tap-lai-cho-cong-ty-tnhh-phuc-hoang-ngan",
+              "description": "Ngày 8/9/2025, tại Showroom THACO Truck & Bus Tam Kỳ - THACO AUTO Đà Nẵng đã bàn giao lô xe THACO Linker T2-6.5 phiên bản tập lái cho Công ty TNHH Phúc Hoàng Ngân.",
+              "image": "https://thacotai.vn/storage/bgx-linker-t265-phn-hdd.jpg",
+              "image_featured": "https://thacotai.vn/storage/bgx-linker-t265-phn-vuong.jpg",
+              "created_at": "12-09",
+              "created_at_year": "2025",
+              "created_at_mb": "12/09/2025",
+              "created_at_service": "12/09/2025 11:39:00 AM"
+            },
+            {
+              "id": 411,
+              "name": "BÀN GIAO LÔ XE ĐẦU KÉO SINOTRUK CHO CÔNG TY CỔ PHẦN ĐẦU TƯ XÂY DỰNG SỐ 1 MÊ KÔNG",
+              "slug": "ban-giao-lo-xe-dau-keo-sinotruk-cho-cong-ty-co-phan-dau-tu-xay-dung-so-1-me-kong",
+              "description": "Vừa qua, tại Showroom THACO Truck & Bus Dĩ An – THACO AUTO TP.HCM đã diễn ra lễ bàn giao lô xe đầu kéo SINOTRUK 6x4 cho Công ty Cổ phần Đầu tư Xây dựng Số 1 Mê Kông, đánh dấu bước phát triển mới trong quan hệ hợp tác chiến lược giữa hai doanh nghiệp.",
+              "image": "https://thacotai.vn/storage/bgx-daukeo-mekong-hdd.jpg",
+              "image_featured": "https://thacotai.vn/storage/bgx-daukeo-mekong-vuong.jpg",
+              "created_at": "06-09",
+              "created_at_year": "2025",
+              "created_at_mb": "06/09/2025",
+              "created_at_service": "06/09/2025 08:27:00 AM"
+            },
+            {
+              "id": 410,
+              "name": "BÀN GIAO LÔ XE THACO LINKER T2-6.5 PHIÊN BẢN TẬP LÁI CHO CÔNG TY CỔ PHẦN GIAO THÔNG VẬN TẢI QUẢNG NAM",
+              "slug": "ban-giao-lo-xe-thaco-linker-t2-65-phien-ban-tap-lai-cho-cong-ty-co-phan-giao-thong-van-tai-quang-nam",
+              "description": "Vừa qua, tại Showroom THACO Truck & Bus Tam Kỳ – THACO AUTO Đà Nẵng đã tổ chức lễ bàn giao lô xe tải trung THACO Linker T2-6.5 phiên bản tập lái cho Công ty Cổ phần Giao thông Vận tải Quảng Nam.",
+              "image": "https://thacotai.vn/storage/bgx-linker-t265-quangnam-hdd.jpg",
+              "image_featured": "https://thacotai.vn/storage/bgx-linker-t265-quangnam-vuong.jpg",
+              "created_at": "05-09",
+              "created_at_year": "2025",
+              "created_at_mb": "05/09/2025",
+              "created_at_service": "05/09/2025 03:55:00 PM"
+            },
+            {
+              "id": 409,
+              "name": "THACO TOWNER VAN: GIẢI PHÁP VẬN CHUYỂN LINH HOẠT 24/7",
+              "slug": "thaco-towner-van-giai-phap-van-chuyen-linh-hoat-247",
+              "description": "THACO Towner Van – dòng xe tải van thương hiệu THACO TRUCK nổi bật với thiết kế hiện đại, khả năng vận hành linh hoạt và tiết kiệm nhiên liệu. Đây là lựa chọn tin cậy cho cá nhân, hộ kinh doanh và doanh nghiệp hoạt động trong lĩnh vực logistics, thương mại điện tử và phân phối hàng tiêu dùng.",
+              "image": "https://thacotai.vn/storage/bv-townervan-1.jpg",
+              "image_featured": "https://thacotai.vn/storage/bv-townervan-vuong.jpg",
+              "created_at": "04-09",
+              "created_at_year": "2025",
+              "created_at_mb": "04/09/2025",
+              "created_at_service": "04/09/2025 04:02:00 PM"
+            },
+            {
+              "id": 408,
+              "name": "MITSUBISHI FUSO CANTER TF 7.5 – GIẢI PHÁP VẬN TẢI HIỆU QUẢ CHO DOANH NGHIỆP",
+              "slug": "mitsubishi-fuso-canter-tf-75-giai-phap-van-tai-hieu-qua-cho-doanh-nghiep",
+              "description": "Mitsubishi Fuso Canter TF7.5 được nghiên cứu phát triển và sản xuất trên dây chuyền công nghệ hiện đại, mang đến khả năng vận hành mạnh mẽ, tiết kiệm nhiên liệu và hiệu quả kinh tế vượt trội. Với tổng trọng tải 7,5 tấn, tải trọng 3,49 tấn, chiều dài thùng 5,2 m và thể tích 21,6 m³, đáp ứng linh hoạt mọi nhu cầu vận chuyển, đồng thời giúp doanh nghiệp tối ưu chi phí và nâng cao hiệu quả khai thác.",
+              "image": "https://thacotai.vn/storage/fuso-canter-tf-75.jpg",
+              "image_featured": "https://thacotai.vn/storage/bv-fuso-canter-tf75-fb-vuong.jpg",
+              "created_at": "03-09",
+              "created_at_year": "2025",
+              "created_at_mb": "03/09/2025",
+              "created_at_service": "03/09/2025 10:24:00 AM"
+            },
+            {
+              "id": 407,
+              "name": "BÀN GIAO LÔ 20 XE KIA FRONTIER K200 TẬP LÁI CHO TRUNG TÂM DẠY NGHỀ VÀ ĐÀO TẠO SÁT HẠCH LÁI XE HẢI VÂN",
+              "slug": "ban-giao-lo-20-xe-kia-frontier-k200-tap-lai-cho-trung-tam-day-nghe-va-dao-tao-sat-hach-lai-xe-hai-van",
+              "description": "Vừa qua, THACO AUTO Đồng Nai đã bàn giao 20 xe Kia Frontier K200 phiên bản tập lái cho Trung tâm Dạy nghề và Đào tạo Sát hạch Lái xe Hải Vân. Riêng trong tháng 8, tổng số xe được bàn giao đã đạt 35 chiếc, nâng số lượng phương tiện THACO AUTO cung cấp cho đơn vị này trong năm 2025 lên hơn 55 xe.",
+              "image": "https://thacotai.vn/storage/bgx-kia-haivan-hdd-1.jpg",
+              "image_featured": "https://thacotai.vn/storage/bgx-kia-haivan-vuong-1.jpg",
+              "created_at": "28-08",
+              "created_at_year": "2025",
+              "created_at_mb": "28/08/2025",
+              "created_at_service": "28/08/2025 02:59:26 PM"
+            }
+          ],
+          "news_link": "/news",
+          "news_title": "TIN TỨC NỔI BẬT"
+        }
+      },
+      {
+        "name": "Video giới thiệu",
+        "component": "home-intro",
+        "data": {
+          "home_intro_title": null,
+          "home_intro_content": null,
+          "home_intro_link": null,
+          "home_intro_file": "video/scada-30s-k-test-2.mp4",
+          "home_intro_overlay": "1"
+        }
+      },
+      {
+        "name": "Chức năng",
+        "component": "function-selection",
+        "data": {
+          "list_function_select": [
+            {
+              "icon": "\u003Csvg width=\"40\" height=\"40\" viewBox=\"0 0 46 45\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"\u003E \u003Cpath d=\"M0 23.9073C0 22.9703 0 22.0321 0 21.095C0.0246588 20.9823 0.0634084 20.8696 0.0728022 20.7557C0.372231 16.9148 1.55938 13.3674 3.71526 10.177C7.33306 4.82256 12.32 1.50654 18.7067 0.342875C19.511 0.196096 20.3259 0.112726 21.1361 0C22.0755 0 23.0149 0 23.9543 0C24.7211 0.100984 25.4925 0.178483 26.2546 0.307648C30.537 1.03332 34.3122 2.83811 37.539 5.73611C41.3928 9.19774 43.8117 13.4802 44.737 18.5822C44.8885 19.4135 44.9742 20.2566 45.0892 21.095C45.0892 22.0321 45.0892 22.9703 45.0892 23.9073C45.0634 24.02 45.0317 24.1316 45.0141 24.2455C44.8591 25.287 44.764 26.3403 44.5468 27.3678C42.4402 37.2971 33.3258 44.8039 23.1605 44.9953C17.705 45.0986 12.805 43.4958 8.5437 40.0929C4.09689 36.542 1.34567 31.9473 0.340527 26.3368C0.196096 25.5325 0.111552 24.7175 0 23.9073ZM5.60577 19.8644C6.9033 19.8644 8.16442 19.8809 9.42437 19.8586C10.2299 19.8445 11.0425 19.8363 11.8362 19.7188C14.1777 19.3713 16.1586 18.3121 17.8025 16.6048C19.0613 15.2967 20.623 14.625 22.4384 14.5992C24.3547 14.571 25.9939 15.2603 27.3255 16.6388C28.9377 18.3074 30.8729 19.4452 33.1767 19.6789C35.241 19.8891 37.3346 19.8093 39.4142 19.8539C39.4353 19.8539 39.4576 19.8233 39.4788 19.8057C38.4079 12.2695 31.6443 5.35331 22.5217 5.36858C13.4226 5.38384 6.66963 12.2883 5.60577 19.8644ZM27.2515 38.9551C31.6067 38.1695 37.7938 32.5356 38.4678 28.7616C34.8781 27.0613 31.4001 27.5322 28.7768 30.166C26.2112 32.741 25.9916 36.4117 27.2515 38.9551ZM17.8365 38.9375C19.093 36.508 18.8934 32.7211 16.2678 30.1131C13.6058 27.4676 9.89758 27.1282 6.60504 28.7862C8.40866 33.7896 13.2277 37.8302 17.8365 38.9375ZM22.5335 19.8656C20.3647 19.8703 18.5881 21.6446 18.5834 23.8099C18.5787 25.9939 20.3694 27.7799 22.557 27.7741C24.7258 27.7682 26.5024 25.9951 26.5059 23.8298C26.5106 21.6422 24.7246 19.8609 22.5335 19.8656Z\" fill=\"black\"/\u003E \u003Cpath d=\"M22.53 25.1373C21.8172 25.1279 21.2242 24.5267 21.2266 23.8151C21.2289 23.0859 21.8548 22.4823 22.584 22.5035C23.2979 22.5246 23.8803 23.1364 23.8651 23.8468C23.8498 24.5595 23.2427 25.1455 22.53 25.1373Z\" fill=\"black\"/\u003E \u003C/svg\u003E",
+              "title": "Đăng ký nhận báo giá",
+              "desc": "Đặt lịch lái thử tại đại lý",
+              "link": "/register-information"
+            },
+            {
+              "icon": "\u003Csvg width=\"46\" height=\"46\" viewBox=\"0 0 46 46\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"\u003E \u003Cpath d=\"M34.5862 0C34.8592 0.166441 35.1933 0.281393 35.3932 0.511296C35.7621 0.932787 35.6435 1.49078 35.1514 1.98412C33.354 3.78144 31.5627 5.58475 29.7462 7.3641C29.4337 7.67064 29.3798 7.91132 29.5175 8.32683C30.1462 10.208 30.7353 12.1023 31.3232 13.9966C31.4035 14.2552 31.5256 14.3834 31.7866 14.4648C33.7552 15.0743 35.7213 15.6933 37.6827 16.3304C37.9605 16.4202 38.1126 16.3531 38.3018 16.1627C40.1158 14.339 41.9347 12.5214 43.7644 10.7145C43.9691 10.5121 44.2302 10.3109 44.4996 10.2391C45.1665 10.0607 45.7641 10.5444 45.7641 11.312C45.7641 12.3226 45.7988 13.3608 45.5928 14.3402C44.4948 19.5622 41.3324 22.8646 36.1237 24.1255C34.0019 24.6392 31.8704 24.4859 29.7977 23.7926C29.3738 23.6514 29.1487 23.7244 28.8518 24.0453C22.6935 30.691 16.5316 37.333 10.3457 43.9535C8.72082 45.6934 6.67323 46.2981 4.373 45.6634C2.10989 45.0396 0.676579 43.5057 0.164085 41.215C-0.31967 39.0513 0.270655 37.133 1.87639 35.6147C8.50049 29.3439 15.1509 23.1005 21.8014 16.8584C22.0744 16.6022 22.1163 16.3986 22.0002 16.0537C19.9753 10.0475 22.9281 3.49406 28.7667 1.00583C29.9582 0.498125 31.1927 0.168836 32.4871 0.0742398C32.5889 0.0670553 32.6895 0.0275406 32.7901 0.00359225C33.3888 0 33.9875 0 34.5862 0ZM5.64945 37.9054C4.44245 37.9042 3.4462 38.8897 3.44381 40.0883C3.44141 41.2725 4.45562 42.2867 5.64346 42.2879C6.84566 42.2891 7.83233 41.3001 7.83473 40.0931C7.83593 38.8777 6.86722 37.9078 5.64945 37.9054Z\" fill=\"black\"\u003E\u003C/path\u003E \u003C/svg\u003E",
+              "title": "Đặt lịch hẹn dịch vụ",
+              "desc": "Đặt lịch hẹn dịch vụ tại đại lý",
+              "link": "/register-information"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

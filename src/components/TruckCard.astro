@@ -1,0 +1,54 @@
+---
+import type { Truck } from '../data/trucksData';
+import { formatPrice, getSpecValue } from '../data/trucksData';
+
+interface Props {
+  truck: Truck;
+}
+
+const { truck } = Astro.props;
+---
+
+<div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+  <div class="relative">
+    <img 
+      src={truck.image} 
+      alt={truck.name}
+      class="w-full h-48 object-cover"
+      loading="lazy"
+    />
+    <div class="absolute top-4 left-4 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+      {truck.brand}
+    </div>
+  </div>
+  
+  <div class="p-6">
+    <h3 class="text-xl font-semibold text-gray-900 mb-2">
+      {truck.name}
+    </h3>
+    
+    <div class="space-y-2 mb-4">
+      <div class="flex justify-between text-sm text-gray-600">
+        <span>Tải trọng:</span>
+        <span class="font-medium">{getSpecValue(truck.basic_specification, 'Tải trọng')}</span>
+      </div>
+      <div class="flex justify-between text-sm text-gray-600">
+        <span>Chiều dài thùng:</span>
+        <span class="font-medium">{getSpecValue(truck.basic_specification, 'Chiều dài thùng')}</span>
+      </div>
+      <div class="flex justify-between text-sm text-gray-600">
+        <span>Dịch vụ 24/7:</span>
+        <span class="font-medium">{getSpecValue(truck.basic_specification, 'Dịch vụ 24/7')}</span>
+      </div>
+    </div>
+    
+    <div class="flex items-center justify-between">
+      <a 
+        href={`/trucks/${truck.id}`}
+        class="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors text-sm font-medium"
+      >
+        Xem chi tiết
+      </a>
+    </div>
+  </div>
+</div>

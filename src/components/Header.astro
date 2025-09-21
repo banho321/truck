@@ -1,0 +1,60 @@
+---
+// Header component with navigation
+---
+
+<header class="bg-white shadow-lg sticky top-0 z-50">
+  <nav class="container mx-auto px-4 py-4">
+    <div class="flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <!-- <img src="/logo.svg" alt="Truck Sales Logo" class="h-10 w-auto" /> -->
+        <a  href="/" class="text-2xl font-bold text-primary-600">Xe tải Đăk Nông</a>
+      </div>
+      
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="/" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">Trang chủ</a>
+        <a href="/trucks" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">Xe tải</a>
+        <a href="/about" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">Giới thiệu</a>
+        <a href="/contact" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">Liên hệ</a>
+        <a href="/contact" class="bg-primary-600 text-white px-6 py-2 rounded-lg hover:bg-primary-700 transition-colors font-medium">
+          Hotline: 0936777735
+        </a>
+      </div>
+      
+      <!-- Mobile menu button -->
+      <button class="md:hidden p-2" id="mobile-menu-button">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Mobile Navigation -->
+    <div class="md:hidden hidden mt-4 pb-4" id="mobile-menu">
+      <div class="flex flex-col space-y-4">
+        <a href="/" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">Trang chủ</a>
+        <a href="/trucks" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">Xe tải</a>
+        <a href="/about" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">Giới thiệu</a>
+        <a href="/contact" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">Liên hệ</a>
+        <a href="tel:00936777735" class="bg-primary-600 text-white px-6 py-2 rounded-lg hover:bg-primary-700 transition-colors font-medium text-center">
+          Hotline: 0936777735
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  // Mobile menu toggle
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  });
+</script>

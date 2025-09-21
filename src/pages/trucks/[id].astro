@@ -1,0 +1,359 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { getAllTrucks, formatPrice, getSpecValue } from '../../data/trucksData';
+
+export async function getStaticPaths() {
+  const trucks = getAllTrucks();
+  return trucks.map((truck) => ({
+    params: { id: truck.id.toString() },
+    props: { truck },
+  }));
+}
+
+const { truck } = Astro.props;
+
+// const formatPrice = (price: number) => {
+//   return new Intl.NumberFormat('vi-VN').format(price);
+// };
+
+const formatMileage = (mileage: number) => {
+  return new Intl.NumberFormat('vi-VN').format(mileage);
+};
+---
+  <!-- title={`${truck.title} - ${formatPrice(truck.price)}đ | TruckSales`} -->
+<Layout 
+  title={`${truck.name} | TruckSales`}
+  description={`${truck.name} - ${getSpecValue(truck.basic_specification, 'Tải trọng')} tải trọng. Bảo hành đầy đủ, giao xe tận nơi.`}
+  image={truck.image}
+  canonical={`/trucks/${truck.id}`}
+>
+  <Header />
+  <main>
+    <!-- Breadcrumb -->
+    <section class="bg-gray-50 py-4">
+      <div class="container mx-auto px-4">
+        <nav class="text-sm">
+          <ol class="flex items-center space-x-2">
+            <li><a href="/" class="text-primary-600 hover:text-primary-700">Trang chủ</a></li>
+            <li class="text-gray-400">/</li>
+            <li><a href="/trucks" class="text-primary-600 hover:text-primary-700">Xe tải</a></li>
+            <li class="text-gray-400">/</li>
+            <li class="text-gray-600">{truck.name}</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+    
+    <!-- Truck Details -->
+    <section class="py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <!-- Images -->
+          <div class="lg:col-span-2">
+            <div class="space-y-4">
+              <!-- Main Image -->
+              <div class="relative">
+                <img 
+                  src={truck.image} 
+                  alt={truck.name}
+                  class="w-full h-96 object-cover rounded-lg shadow-lg"
+                  id="main-image"
+                />
+                <div class="absolute top-4 left-4 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                  {truck.brand}
+                </div>
+              </div>
+              
+              <!-- Thumbnail Images -->
+              {truck.image && (
+                <div class="grid grid-cols-4 gap-2">
+                  <img 
+                    src={truck.image} 
+                    alt={`${truck.name} - Hình 1`}
+                    class="w-full h-20 object-cover rounded-lg cursor-pointer hover:opacity-75 transition-opacity"
+                    onclick={`document.getElementById('main-image').src = '${truck.image}'`}
+                  />
+                </div>
+              )}
+            </div>
+          </div>
+          
+          <!-- Details -->
+          <div class="lg:col-span-1">
+            <div class="bg-white p-6 rounded-lg shadow-lg sticky top-4">
+              <h1 class="text-2xl font-bold text-gray-900 mb-4">
+                {truck.name}
+              </h1>
+              
+              <div class="text-3xl font-bold text-primary-600 mb-6">
+                {formatPrice(truck.price)}
+              </div>
+              
+              <!-- Key Specs -->
+              <div class="space-y-3 mb-6">
+                {truck.basic_specification && Array.isArray(truck.basic_specification) && truck.basic_specification.map(spec => (
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">{spec.title}:</span>
+                    <span class="font-medium">{spec.value}</span>
+                  </div>
+                ))}
+              </div>
+              
+              <!-- Contact Buttons -->
+              <div class="space-y-4">
+                <div class="bg-primary-50 p-4 rounded-lg">
+                  <h3 class="font-semibold text-primary-900 mb-2">Hỗ trợ bán hàng 24/7</h3>
+                  <p class="text-primary-700 text-sm mb-3">Đội ngũ tư vấn chuyên nghiệp sẵn sàng hỗ trợ bạn</p>
+                  <a 
+                    href={`tel:0900123456`}
+                    class="w-full bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition-colors font-semibold text-center block"
+                  >
+                    📞 Hotline: 0900.123.456
+                  </a>
+                </div>
+                
+                <div class="space-y-3">
+                  <a 
+                    href="/contact"
+                    class="w-full border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-lg hover:bg-primary-600 hover:text-white transition-colors font-semibold text-center block"
+                  >
+                    💬 Tư vấn trực tuyến
+                  </a>
+                  <a 
+                    href="/contact"
+                    class="w-full bg-gray-100 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-200 transition-colors font-semibold text-center block"
+                  >
+                    📋 Yêu cầu báo giá
+                  </a>
+                </div>
+                
+                <div class="bg-green-50 p-4 rounded-lg">
+                  <h3 class="font-semibold text-green-900 mb-2">Cam kết chất lượng</h3>
+                  <ul class="text-green-700 text-sm space-y-1">
+                    <li>✓ Bảo hành chính hãng</li>
+                    <li>✓ Giao xe tận nơi</li>
+                    <li>✓ Hỗ trợ trả góp</li>
+                    <li>✓ Dịch vụ sau bán hàng</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Detailed Information -->
+        <div class="mt-12">
+          <!-- Overview -->
+          <div class="bg-white p-8 rounded-lg shadow-lg mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Tổng quan sản phẩm</h2>
+            <div class="prose max-w-none">
+              <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                <strong>{truck.name}</strong> là dòng xe tải thương mại chất lượng cao từ thương hiệu {truck.brand}. 
+                Với thiết kế hiện đại và công nghệ tiên tiến, {truck.name} mang đến hiệu suất vận hành tối ưu 
+                và độ tin cậy cao cho các hoạt động vận tải hàng hóa.
+              </p>
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-blue-50 p-4 rounded-lg">
+                  <h3 class="font-semibold text-blue-900 mb-2">Tải trọng</h3>
+                  <p class="text-blue-700">{getSpecValue(truck.basic_specification, 'Tải trọng')}</p>
+                </div>
+                <div class="bg-green-50 p-4 rounded-lg">
+                  <h3 class="font-semibold text-green-900 mb-2">Chiều dài thùng</h3>
+                  <p class="text-green-700">{getSpecValue(truck.basic_specification, 'Chiều dài thùng')}</p>
+                </div>
+                <div class="bg-orange-50 p-4 rounded-lg">
+                  <h3 class="font-semibold text-orange-900 mb-2">Dịch vụ 24/7</h3>
+                  <p class="text-orange-700">{getSpecValue(truck.basic_specification, 'Dịch vụ 24/7')}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Technical Specifications -->
+          <div class="bg-white p-8 rounded-lg shadow-lg mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Thông số kỹ thuật chi tiết</h2>
+            <div class="overflow-x-auto">
+              <table class="w-full border-collapse border border-gray-300">
+                <thead>
+                  <tr class="bg-gray-50">
+                    <th class="border border-gray-300 px-4 py-3 text-left font-semibold text-gray-900">Thông số</th>
+                    <th class="border border-gray-300 px-4 py-3 text-left font-semibold text-gray-900">Giá trị</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {truck.basic_specification && Array.isArray(truck.basic_specification) && truck.basic_specification.map((spec, index) => (
+                    <tr class={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                      <td class="border border-gray-300 px-4 py-3 font-medium text-gray-700">{spec.title}</td>
+                      <td class="border border-gray-300 px-4 py-3 text-gray-600">{spec.value}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Features and Benefits -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Key Features -->
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+              <h2 class="text-2xl font-bold text-gray-900 mb-6">Tính năng nổi bật</h2>
+              <ul class="space-y-4">
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  <div>
+                    <h3 class="font-semibold text-gray-900">Thiết kế hiện đại</h3>
+                    <p class="text-gray-600 text-sm">Kiểu dáng sang trọng, phù hợp với xu hướng thời đại</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  <div>
+                    <h3 class="font-semibold text-gray-900">Tiết kiệm nhiên liệu</h3>
+                    <p class="text-gray-600 text-sm">Công nghệ động cơ tiên tiến giúp giảm chi phí vận hành</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  <div>
+                    <h3 class="font-semibold text-gray-900">An toàn cao</h3>
+                    <p class="text-gray-600 text-sm">Hệ thống an toàn tiên tiến, bảo vệ tối đa cho người lái</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  <div>
+                    <h3 class="font-semibold text-gray-900">Bảo hành toàn diện</h3>
+                    <p class="text-gray-600 text-sm">Chế độ bảo hành dài hạn, hỗ trợ kỹ thuật 24/7</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Why Choose This Truck -->
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+              <h2 class="text-2xl font-bold text-gray-900 mb-6">Tại sao chọn {truck.name}?</h2>
+              <div class="space-y-4">
+                <div class="border-l-4 border-primary-600 pl-4">
+                  <h3 class="font-semibold text-gray-900">Hiệu suất vượt trội</h3>
+                  <p class="text-gray-600 text-sm">Động cơ mạnh mẽ, tiết kiệm nhiên liệu, phù hợp với mọi địa hình</p>
+                </div>
+                <div class="border-l-4 border-primary-600 pl-4">
+                  <h3 class="font-semibold text-gray-900">Độ tin cậy cao</h3>
+                  <p class="text-gray-600 text-sm">Được sản xuất theo tiêu chuẩn quốc tế, đảm bảo chất lượng</p>
+                </div>
+                <div class="border-l-4 border-primary-600 pl-4">
+                  <h3 class="font-semibold text-gray-900">Giá trị đầu tư</h3>
+                  <p class="text-gray-600 text-sm">Chi phí vận hành thấp, giá trị bán lại cao</p>
+                </div>
+                <div class="border-l-4 border-primary-600 pl-4">
+                  <h3 class="font-semibold text-gray-900">Hỗ trợ toàn diện</h3>
+                  <p class="text-gray-600 text-sm">Mạng lưới dịch vụ rộng khắp, phụ tùng chính hãng</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Service and Support -->
+        <div class="mt-12">
+          <div class="bg-gradient-to-r from-primary-600 to-primary-700 text-white p-8 rounded-lg mb-8">
+            <h2 class="text-2xl font-bold mb-4">Dịch vụ & Hỗ trợ</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="text-center">
+                <div class="bg-white bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <h3 class="font-semibold mb-2">Bảo hành toàn diện</h3>
+                <p class="text-sm opacity-90">Bảo hành chính hãng, hỗ trợ kỹ thuật 24/7</p>
+              </div>
+              <div class="text-center">
+                <div class="bg-white bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                  </svg>
+                </div>
+                <h3 class="font-semibold mb-2">Giao xe tận nơi</h3>
+                <p class="text-sm opacity-90">Miễn phí giao xe trong khu vực, kiểm tra kỹ lưỡng</p>
+              </div>
+              <div class="text-center">
+                <div class="bg-white bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                  </svg>
+                </div>
+                <h3 class="font-semibold mb-2">Hỗ trợ trả góp</h3>
+                <p class="text-sm opacity-90">Lãi suất ưu đãi, thủ tục đơn giản, nhanh chóng</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Related Trucks -->
+        <div class="mt-12">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Xe tải liên quan</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {getAllTrucks().filter(t => t.id !== truck.id && t.brand === truck.brand).slice(0, 3).map(relatedTruck => (
+              <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <img 
+                  src={relatedTruck.image} 
+                  alt={relatedTruck.name}
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h3 class="font-semibold text-gray-900 mb-2">{relatedTruck.name}</h3>
+                  <div class="text-lg font-bold text-primary-600 mb-2">
+                    {formatPrice(relatedTruck.price)}
+                  </div>
+                  <a 
+                    href={`/trucks/${relatedTruck.id}`}
+                    class="text-primary-600 hover:text-primary-700 font-medium"
+                  >
+                    Xem chi tiết →
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<!-- Structured Data for SEO -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Car",
+  "name": truck.name,
+  "description": truck.name + " - " + getSpecValue(truck.basic_specification, 'Tải trọng'),
+  "brand": {
+    "@type": "Brand",
+    "name": truck.brand
+  },
+  "model": truck.name,
+  "offers": {
+    "@type": "Offer",
+    // "price": truck.price,
+    // "priceCurrency": "VND",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "TruckSales"
+    }
+  },
+  "image": truck.image
+})} />

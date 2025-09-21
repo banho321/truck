@@ -1,0 +1,176 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import TruckCard from '../../components/TruckCard.astro';
+import TruckFilters from '../../components/TruckFilters.astro';
+import { getAllTrucks, uniqueBrands, getTrucksByBrand } from '../../data/trucksData';
+
+const allTrucks = getAllTrucks();
+---
+
+<Layout 
+  title="Danh sách xe tải - TruckSales | Hàng trăm xe tải chất lượng cao"
+  description="Xem danh sách xe tải cũ và mới với đầy đủ thông tin chi tiết. Tìm kiếm và lọc xe tải theo thương hiệu, năm sản xuất, giá cả. Bảo hành đầy đủ, giao xe tận nơi."
+>
+  <Header />
+  <main>
+    <!-- Page Header -->
+    <section class="bg-primary-600 text-white py-16">
+      <div class="container mx-auto px-4">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">
+            Danh sách xe tải
+          </h1>
+          <p class="text-xl text-gray-100 max-w-2xl mx-auto">
+            Khám phá hàng trăm xe tải chất lượng cao với đầy đủ thông tin chi tiết
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Filters and Results -->
+    <section class="py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          <!-- Filters Sidebar -->
+          <div class="lg:col-span-1">
+            <TruckFilters />
+          </div>
+          
+          <!-- Results -->
+          <div class="lg:col-span-3">
+            <div class="flex items-center justify-between mb-6">
+              <h2 class="text-2xl font-bold text-gray-900">
+                Danh sách xe tải ({allTrucks.length} xe)
+              </h2>
+              <!-- <div class="flex items-center space-x-2">
+                <span class="text-sm text-gray-600">Sắp xếp:</span>
+                <select id="sort-select" class="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+                  <option value="newest">Mới nhất</option>
+                  <option value="oldest">Cũ nhất</option>
+                  <option value="price-low">Giá thấp đến cao</option>
+                  <option value="price-high">Giá cao đến thấp</option>
+                  <option value="mileage-low">Số km ít nhất</option>
+                  <option value="mileage-high">Số km nhiều nhất</option>
+                </select>
+              </div> -->
+            </div>
+            
+            <!-- Trucks organized by brand -->
+            <div id="trucks-by-brand">
+              {uniqueBrands.map(brand => {
+                const brandTrucks = getTrucksByBrand(brand);
+                return (
+                  <div class="mb-12">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 border-b-2 border-primary-600 pb-2">
+                      {brand} ({brandTrucks.length} xe)
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6" data-brand={brand}>
+                      {brandTrucks.map(truck => (
+                        <div data-truck={JSON.stringify(truck)}>
+                          <TruckCard truck={truck} />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            
+            <!-- All trucks view (hidden by default) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 hidden" id="trucks-grid">
+              {allTrucks.map(truck => (
+                <div data-truck={JSON.stringify(truck)}>
+                  <TruckCard truck={truck} />
+                </div>
+              ))}
+            </div>
+            
+            <!-- No Results Message -->
+            <div id="no-results" class="hidden text-center py-12">
+              <div class="text-6xl mb-4">🚚</div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                Không tìm thấy xe tải phù hợp
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Hãy thử điều chỉnh bộ lọc hoặc liên hệ với chúng tôi để được tư vấn
+              </p>
+              <a 
+                href="/contact" 
+                class="bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition-colors font-medium"
+              >
+                Liên hệ tư vấn
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  // Sort functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const sortSelect = document.getElementById('sort-select');
+    const trucksGrid = document.getElementById('trucks-grid');
+    const noResults = document.getElementById('no-results');
+    
+    function sortTrucks(sortBy) {
+      const truckElements = Array.from(trucksGrid.children);
+      
+      truckElements.sort((a, b) => {
+        const truckA = JSON.parse(a.dataset.truck);
+        const truckB = JSON.parse(b.dataset.truck);
+        
+        switch(sortBy) {
+          case 'newest':
+            return truckB.year - truckA.year;
+          case 'oldest':
+            return truckA.year - truckB.year;
+          // case 'price-low':
+          //   return truckA.price - truckB.price;
+          // case 'price-high':
+          //   return truckB.price - truckA.price;
+          case 'mileage-low':
+            return truckA.mileage - truckB.mileage;
+          case 'mileage-high':
+            return truckB.mileage - truckA.mileage;
+          default:
+            return 0;
+        }
+      });
+      
+      // Re-append sorted elements
+      truckElements.forEach(element => trucksGrid.appendChild(element));
+    }
+    
+    if (sortSelect) {
+      sortSelect.addEventListener('change', function() {
+        sortTrucks(this.value);
+      });
+    }
+    
+    // Show/hide no results message
+    function updateNoResultsMessage() {
+      const visibleTrucks = Array.from(trucksGrid.children).filter(el => el.style.display !== 'none');
+      
+      if (visibleTrucks.length === 0) {
+        noResults.classList.remove('hidden');
+        trucksGrid.classList.add('hidden');
+      } else {
+        noResults.classList.add('hidden');
+        trucksGrid.classList.remove('hidden');
+      }
+    }
+    
+    // Override the filter function to include no results check
+    const originalFilterTrucks = window.filterTrucks;
+    window.filterTrucks = function() {
+      if (originalFilterTrucks) originalFilterTrucks();
+      updateNoResultsMessage();
+    };
+  });
+</script>

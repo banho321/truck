@@ -1,0 +1,24 @@
+---
+// Optimized image component with lazy loading
+export interface Props {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  class?: string;
+  priority?: boolean;
+}
+
+const { src, alt, width, height, class: className = '', priority = false } = Astro.props;
+---
+
+<img 
+  src={src} 
+  alt={alt}
+  width={width}
+  height={height}
+  class={`${className} ${!priority ? 'lazy' : ''}`}
+  loading={priority ? 'eager' : 'lazy'}
+  decoding="async"
+  fetchpriority={priority ? 'high' : 'auto'}
+/>

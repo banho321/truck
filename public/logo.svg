@@ -1,0 +1,8 @@
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="40" rx="8" fill="#3B82F6"/>
+  <path d="M12 16h24v12H12z" fill="white"/>
+  <circle cx="16" cy="32" r="3" fill="white"/>
+  <circle cx="32" cy="32" r="3" fill="white"/>
+  <path d="M8 16l3-6h26l3 6" stroke="white" stroke-width="2" fill="none"/>
+  <text x="45" y="25" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">TruckSales</text>
+</svg>

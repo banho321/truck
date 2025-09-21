@@ -1,0 +1,76 @@
+---
+// Featured trucks section
+import { getFeaturedTrucks, formatPrice, getSpecValue } from '../data/trucksData';
+
+const featuredTrucks = getFeaturedTrucks();
+---
+
+<section class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Xe tải nổi bật
+      </h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Những chiếc xe tải chất lượng cao, được kiểm tra kỹ lưỡng và bảo hành đầy đủ
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {featuredTrucks.map((truck) => (
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+          <div class="relative">
+            <img 
+              src={truck.image} 
+              alt={truck.title}
+              class="w-full h-48 object-cover"
+              loading="lazy"
+            />
+            <div class="absolute top-4 left-4 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+              Nổi bật
+            </div>
+          </div>
+          
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">
+              {truck.name}
+            </h3>
+            
+            <div class="space-y-2 mb-4">
+              <div class="flex justify-between text-sm text-gray-600">
+                <span>Tải trọng:</span>
+                <span class="font-medium">{getSpecValue(truck.basic_specification, 'Tải trọng')}</span>
+              </div>
+              <div class="flex justify-between text-sm text-gray-600">
+                <span>Chiều dài thùng:</span>
+                <span class="font-medium">{getSpecValue(truck.basic_specification, 'Chiều dài thùng')}</span>
+              </div>
+              {/* <div class="flex justify-between text-sm text-gray-600">
+                <span>Dịch vụ 24/7:</span>
+                <span class="font-medium">{getSpecValue(truck.basic_specification, 'Dịch vụ 24/7')}</span>
+              </div> */}
+            </div>
+            
+            <div class="flex items-center justify-between">
+              <a 
+                href={`/trucks/${truck.id}`}
+                class="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors text-sm font-medium"
+              >
+                Xem chi tiết
+              </a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+    
+    <div class="text-center mt-12">
+      <a 
+        href="/trucks"
+        class="bg-primary-600 text-white px-8 py-3 rounded-lg hover:bg-primary-700 transition-colors font-semibold inline-block"
+      >
+        Xem tất cả xe tải
+      </a>
+    </div>
+  </div>
+</section>

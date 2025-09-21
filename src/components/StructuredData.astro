@@ -1,0 +1,60 @@
+---
+// Structured Data component for SEO
+import { trucks } from '../data/trucks';
+
+const organizationData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "TruckSales",
+  "url": "https://your-truck-website.com",
+  "logo": "https://your-truck-website.com/logo.svg",
+  "description": "Chuyên bán xe tải cũ và mới, uy tín, chất lượng cao",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "123 Đường ABC, Phường XYZ",
+    "addressLocality": "Quận 1",
+    "addressRegion": "TP. Hồ Chí Minh",
+    "addressCountry": "VN"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+84-900-xxx-xxx",
+    "contactType": "sales",
+    "availableLanguage": "Vietnamese"
+  },
+  "sameAs": [
+    "https://facebook.com/trucksales",
+    "https://twitter.com/trucksales"
+  ]
+};
+
+const websiteData = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "TruckSales",
+  "url": "https://your-truck-website.com",
+  "description": "Chuyên bán xe tải cũ và mới, uy tín, chất lượng cao",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://your-truck-website.com/trucks?search={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+};
+
+const breadcrumbData = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Trang chủ",
+      "item": "https://your-truck-website.com"
+    }
+  ]
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(organizationData)} />
+<script type="application/ld+json" set:html={JSON.stringify(websiteData)} />
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbData)} />

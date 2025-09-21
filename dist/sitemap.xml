@@ -1,0 +1,31 @@
+---
+// Sitemap for SEO
+import { trucks } from '../data/trucks';
+
+const pages = [
+  { url: '/', priority: '1.0', changefreq: 'daily' },
+  { url: '/trucks', priority: '0.9', changefreq: 'daily' },
+  { url: '/about', priority: '0.8', changefreq: 'monthly' },
+  { url: '/contact', priority: '0.8', changefreq: 'monthly' },
+];
+
+const truckPages = trucks.map(truck => ({
+  url: `/trucks/${truck.id}`,
+  priority: '0.7',
+  changefreq: 'weekly'
+}));
+
+const allPages = [...pages, ...truckPages];
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {allPages.map(page => (
+    <url>
+      <loc>https://your-truck-website.com{page.url}</loc>
+      <lastmod>{new Date().toISOString().split('T')[0]}</lastmod>
+      <changefreq>{page.changefreq}</changefreq>
+      <priority>{page.priority}</priority>
+    </url>
+  ))}
+</urlset>

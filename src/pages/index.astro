@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import FeaturedTrucks from '../components/FeaturedTrucks.astro';
+import Features from '../components/Features.astro';
+---
+
+<Layout 
+  title="Bán xe tải | Uy tín, chất lượng cao"
+  description="Chuyên bán xe tải mới, uy tín, chất lượng cao. Hàng trăm xe tải đang chờ bạn lựa chọn với giá cả hợp lý nhất thị trường. Bảo hành đầy đủ, giao xe tận nơi."
+>
+  <Header />
+  <main>
+    <Hero />
+    <FeaturedTrucks />
+    <Features />
+    
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary-600 text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Bạn đang tìm xe tải phù hợp?
+        </h2>
+        <p class="text-xl mb-8 text-gray-100">
+          Liên hệ ngay với chúng tôi để được tư vấn miễn phí và tìm xe phù hợp nhất
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="tel:0936777735" 
+            class="bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+          >
+            📞 Gọi ngay: 0936777735
+          </a>
+          <!-- <a 
+            href="/contact" 
+            class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors"
+          >
+            Liên hệ tư vấn
+          </a> -->
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

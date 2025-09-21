@@ -1,0 +1,62 @@
+---
+// Features section
+const features = [
+  {
+    icon: "🛡️",
+    title: "Bảo hành đầy đủ",
+    description: "Tất cả xe tải đều được bảo hành chính hãng và hỗ trợ kỹ thuật 24/7"
+  },
+  {
+    icon: "🔍",
+    title: "Kiểm tra kỹ lưỡng",
+    description: "Mỗi chiếc xe đều được kiểm tra 150 điểm trước khi bán ra thị trường"
+  },
+   {
+    icon: "🎧",
+    title: "Tư vấn chuyên nghiệp",
+    description: "Luôn sẵn sàng hỗ trợ và tư vấn để bạn chọn được chiếc xe phù hợp nhất 24/7"
+  },
+  {
+    icon: "💰",
+    title: "Giá cả hợp lý",
+    description: "Cam kết mang đến mức giá tốt nhất thị trường với nhiều ưu đãi hấp dẫn"
+  },
+  {
+    icon: "📋",
+    title: "Thủ tục nhanh gọn",
+    description: "Hỗ trợ làm thủ tục đăng ký, đăng kiểm và chuyển nhượng xe nhanh chóng"
+  },
+  {
+    icon: "🎯",
+    title: "Hổ trợ tận tâm",
+    description: "Hỗ trợ tận tâm từ khâu tư vấn, mua bán đến sau bán hàng"
+  }
+];
+---
+
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Tại sao chọn chúng tôi?
+      </h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Với hơn 10 năm kinh nghiệm trong lĩnh vực xe tải, chúng tôi cam kết mang đến dịch vụ tốt nhất
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {features.map((feature) => (
+        <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow">
+          <div class="text-4xl mb-4">{feature.icon}</div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">
+            {feature.title}
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            {feature.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
