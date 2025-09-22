@@ -1,6 +1,6 @@
 ---
 import type { Truck } from '../data/trucksData';
-import { formatPrice, getSpecValue } from '../data/trucksData';
+import { getSpecValue } from '../data/trucksData';
 
 interface Props {
   truck: Truck;
@@ -42,10 +42,10 @@ const { truck } = Astro.props;
       </div>
     </div>
     
-    <div class="flex items-center justify-between">
+    <div class="flex items-center justify-center">
       <a 
         href={`/trucks/${truck.id}`}
-        class="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors text-sm font-medium"
+        class="w-full bg-primary-600 text-white px-4 py-3 rounded-lg hover:bg-primary-700 transition-colors text-sm font-medium text-center"
       >
         Xem chi tiết
       </a>

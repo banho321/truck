@@ -98,11 +98,11 @@ export const searchTrucks = (query: string): Truck[] => {
   );
 };
 
-// Format price for display
-export const formatPrice = (price: number | null): string => {
-  if (!price) return 'Liên hệ';
-  return new Intl.NumberFormat('vi-VN').format(price) + 'đ';
-};
+// Format price for display (removed - no longer needed)
+// export const formatPrice = (price: number | null): string => {
+//   if (!price) return 'Liên hệ';
+//   return new Intl.NumberFormat('vi-VN').format(price) + 'đ';
+// };
 
 // Get specification value by title
 export const getSpecValue = (specs: TruckSpec[] | undefined, title: string): string => {

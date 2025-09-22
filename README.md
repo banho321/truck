@@ -130,7 +130,6 @@ Edit `src/data/trucks.ts` to add new truck listings:
   title: "New Truck Model",
   brand: "Brand",
   model: "Model",
-  year: 2023,
   price: 1000000000,
   // ... other properties
 }
@@ -204,7 +203,7 @@ This project is licensed under the MIT License.
 ## 📞 Support
 
 For support or questions:
-- Email: info@trucksales.com
+- Email:  lethanhtuan@thaco.com.vn
 - Phone: 0900.xxx.xxx
 
 ---

@@ -2,7 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import { getAllTrucks, formatPrice, getSpecValue } from '../../data/trucksData';
+import { getAllTrucks, getSpecValue } from '../../data/trucksData';
 
 export async function getStaticPaths() {
   const trucks = getAllTrucks();
@@ -87,9 +87,12 @@ const formatMileage = (mileage: number) => {
                 {truck.name}
               </h1>
               
-              <div class="text-3xl font-bold text-primary-600 mb-6">
-                {formatPrice(truck.price)}
-              </div>
+                  <div class="bg-primary-50 p-4 rounded-lg mb-6">
+                    <h3 class="font-semibold text-primary-900 mb-2">Liên hệ báo giá</h3>
+                    <p class="text-primary-700 text-sm">
+                      Vui lòng liên hệ để nhận báo giá chi tiết và ưu đãi tốt nhất
+                    </p>
+                  </div>
               
               <!-- Key Specs -->
               <div class="space-y-3 mb-6">
@@ -110,7 +113,7 @@ const formatMileage = (mileage: number) => {
                     href={`tel:0900123456`}
                     class="w-full bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition-colors font-semibold text-center block"
                   >
-                    📞 Hotline: 0900.123.456
+                    📞 Hotline: 0936777735
                   </a>
                 </div>
                 
@@ -314,9 +317,9 @@ const formatMileage = (mileage: number) => {
                 />
                 <div class="p-4">
                   <h3 class="font-semibold text-gray-900 mb-2">{relatedTruck.name}</h3>
-                  <div class="text-lg font-bold text-primary-600 mb-2">
-                    {formatPrice(relatedTruck.price)}
-                  </div>
+                      <div class="text-sm text-gray-500 mb-2">
+                        Liên hệ báo giá
+                      </div>
                   <a 
                     href={`/trucks/${relatedTruck.id}`}
                     class="text-primary-600 hover:text-primary-700 font-medium"
