@@ -1,0 +1,699 @@
+{
+  "message": "",
+  "result": {
+    "title": "S\u01a0 MI R\u01a0 MOOC",
+    "description": null,
+    "meta": { "image": "https://thacotai.vn/storage/logo/1692774050587.jpg" },
+    "icon": "https://thacotai.vn/storage/logo/logo-2024/apdung-logo-truyenthong-web-favicon.jpg",
+    "image": "https://thacotai.vn/storage/logo/1692774050587.jpg",
+    "components": [
+      {
+        "name": "breadcrumb",
+        "component": "breadcrumb",
+        "data": {
+          "listBreadcrumb": [
+            { "name": "Trang ch\u1ee7", "url": "/" },
+            { "name": "S\u1ea3n ph\u1ea9m", "url": "/san-pham" },
+            { "name": "S\u01a0 MI R\u01a0 MOOC", "url": "somi-romooc" }
+          ]
+        }
+      },
+      {
+        "name": "Product",
+        "component": "product",
+        "data": {
+          "brands": [
+            {
+              "id": 6,
+              "name": "THACO TRUCK",
+              "slug": "thaco-truck",
+              "description": null,
+              "parent_id": 0,
+              "link": null,
+              "active": false,
+              "image": "https://thacotai.vn/storage/logo/apdung-logo-truyenthong-web-truck-phancap.jpg"
+            },
+            {
+              "id": 8,
+              "name": "KIA",
+              "slug": "kia",
+              "description": null,
+              "parent_id": 0,
+              "link": null,
+              "active": false,
+              "image": "https://thacotruck.com.vn/backend/storage/logo/logo-kia-2-3.png"
+            },
+            {
+              "id": 2,
+              "name": "MITSUBISHI FUSO",
+              "slug": "fuso",
+              "description": null,
+              "parent_id": 0,
+              "link": null,
+              "active": false,
+              "image": "https://thacotai.vn/storage/logo/logo-san-pham/untitled-1-03-2.png"
+            },
+            {
+              "id": 9,
+              "name": "SINOTRUK",
+              "slug": "sinotruk",
+              "description": null,
+              "parent_id": 0,
+              "link": null,
+              "active": false,
+              "image": "https://thacotruck.com.vn/backend/storage/logo/logo-sinotruck2-1.png"
+            },
+            {
+              "id": 11,
+              "name": "S\u01a0 MI R\u01a0 MOOC",
+              "slug": "somi-romooc",
+              "description": null,
+              "parent_id": 0,
+              "link": null,
+              "active": true,
+              "image": "https://thacotai.vn/storage/logo/1692774050587.jpg"
+            }
+          ],
+          "load": [
+            {
+              "id": 1,
+              "name": "D\u01b0\u1edbi 1 t\u1ea5n",
+              "from_load": 0,
+              "to_load": 1
+            },
+            {
+              "id": 2,
+              "name": "1 t\u1ea5n \u2264 2.5 t\u1ea5n",
+              "from_load": 1,
+              "to_load": 2.5
+            },
+            {
+              "id": 3,
+              "name": "2.5 t\u1ea5n \u2264 5 t\u1ea5n",
+              "from_load": 2.5,
+              "to_load": 5
+            },
+            {
+              "id": 4,
+              "name": "5 t\u1ea5n \u2264 8 t\u1ea5n",
+              "from_load": 5,
+              "to_load": 8
+            },
+            {
+              "id": 5,
+              "name": "Tr\u00ean 8 t\u1ea5n",
+              "from_load": 8,
+              "to_load": 100
+            }
+          ],
+          "price": [
+            {
+              "id": 1,
+              "name": "D\u01b0\u1edbi 300 tri\u1ec7u",
+              "from_price": 0,
+              "to_price": 300000000
+            },
+            {
+              "id": 2,
+              "name": "300 tri\u1ec7u \u2264 500 tri\u1ec7u",
+              "from_price": 300000000,
+              "to_price": 500000000
+            },
+            {
+              "id": 3,
+              "name": "500 tri\u1ec7u \u2264 700 tri\u1ec7u",
+              "from_price": 500000000,
+              "to_price": 700000000
+            },
+            {
+              "id": 4,
+              "name": "700 tri\u1ec7u \u2264 900 tri\u1ec7u",
+              "from_price": 700000000,
+              "to_price": 900000000
+            },
+            {
+              "id": 5,
+              "name": "Tr\u00ean 900 tri\u1ec7u",
+              "from_price": 900000000,
+              "to_price": 10000000000
+            }
+          ],
+          "listCategories": [
+            {
+              "id": 10,
+              "name": "T\u1ea3i nh\u1eb9 m\u00e1y x\u0103ng",
+              "slug": null,
+              "categories": null
+            },
+            {
+              "id": 11,
+              "name": "T\u1ea3i nh\u1eb9 m\u00e1y d\u1ea7u",
+              "slug": null,
+              "categories": null
+            },
+            {
+              "id": 12,
+              "name": "T\u1ea3i van",
+              "slug": null,
+              "categories": null
+            },
+            {
+              "id": 13,
+              "name": "T\u1ea3i trung",
+              "slug": null,
+              "categories": null
+            },
+            { "id": 15, "name": "Ben trung", "slug": null, "categories": null },
+            {
+              "id": 16,
+              "name": "Ben n\u1eb7ng",
+              "slug": null,
+              "categories": null
+            },
+            {
+              "id": 17,
+              "name": "\u0110\u1ea7u k\u00e9o",
+              "slug": null,
+              "categories": null
+            },
+            {
+              "id": 18,
+              "name": "Xe chuy\u00ean d\u1ee5ng",
+              "slug": null,
+              "categories": null
+            },
+            {
+              "id": 19,
+              "name": "S\u01a1 Mi R\u01a1 Mooc",
+              "slug": null,
+              "categories": null
+            }
+          ],
+          "cars": [
+            {
+              "id": 28,
+              "categoryCarname": "SMRM C\u1ed4 C\u00d2",
+              "categoryCarLink": null,
+              "carsCount": 2,
+              "car": [
+                {
+                  "id": 227,
+                  "name": "SMRM X\u01af\u01a0NG C\u1ed4 C\u00d2 3 TR\u1ee4C 45 FEET 6 KH\u00d3A",
+                  "slug": "smrm-xuongcc-3t6k45f",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "34.25 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i m\u00f3c",
+                      "value": "13.9 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "79 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/smrm/smrm-xuong-co-co/3t6k45f/hinhdd-smrm-xuongcc-3t6k45f-1.png",
+                  "weight": 33.2,
+                  "price": null
+                },
+                {
+                  "id": 49,
+                  "name": "SMRM X\u01af\u01a0NG C\u1ed4 C\u00d2 3 TR\u1ee4C 4 KH\u00d3A 40 FEET",
+                  "slug": "smrm-xuongcc-3t4k40f",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "34.25 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i m\u00f3c",
+                      "value": "12.4 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "79 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/smrm/smrm-xuong-co-co/3t4k40f/hinhdd-smrm-xuongcoco-3t4k40f.png",
+                  "weight": 34.25,
+                  "price": null
+                }
+              ]
+            },
+            {
+              "id": 27,
+              "categoryCarname": "SMRM S\u00c0N",
+              "categoryCarLink": null,
+              "carsCount": 3,
+              "car": [
+                {
+                  "id": 47,
+                  "name": "SMRM S\u00c0N 3 TR\u1ee4C 8 KH\u00d3A 40 FEET",
+                  "slug": "smrm-san-3t8k40f",
+                  "promotion": null,
+                  "promotion_link": "#",
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "32.26 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i m\u00f3c",
+                      "value": "12.25 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "79 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/smrm/smrm-san/3t8k40f/hinhdd-smrm-san-3t8k40f.png",
+                  "weight": 32.26,
+                  "price": null
+                },
+                {
+                  "id": 110,
+                  "name": "SMRM S\u00c0N 3 TR\u1ee4C 10 KH\u00d3A 45 FEET",
+                  "slug": "smrm-san-3t10k45f",
+                  "promotion": null,
+                  "promotion_link": "#",
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "31.52 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i m\u00f3c",
+                      "value": "13.97 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "79 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/smrm/smrm-san/3t10k45f/hinhdd-smrm-san-3t10k45f.png",
+                  "weight": 31.52,
+                  "price": null
+                },
+                {
+                  "id": 111,
+                  "name": "SMRM S\u00c0N 3 TR\u1ee4C 12 KH\u00d3A 40 FEET",
+                  "slug": "smrm-san-3t12k450f",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "32.38 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i m\u00f3c",
+                      "value": "12.39 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "79 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/smrm/smrm-san/3t12k40f/hinhdd-smrm-san-3t12k40f.png",
+                  "weight": 32.38,
+                  "price": null
+                }
+              ]
+            },
+            {
+              "id": 29,
+              "categoryCarname": "SMRM X\u01af\u01a0NG TH\u1eb2NG",
+              "categoryCarLink": null,
+              "carsCount": 5,
+              "car": [
+                {
+                  "id": 190,
+                  "name": "SMRM X\u01af\u01a0NG 2 TR\u1ee4C 40 FEET 8 KH\u00d3A",
+                  "slug": "smrm-xuong-2t8k40f-1",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "27.81 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i m\u00f3c",
+                      "value": "12.25 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "79 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/smrm/smrm-xuong-thang/2t8k40f/smrm-xuongthang-2t8k40f.png",
+                  "weight": 27.81,
+                  "price": null
+                },
+                {
+                  "id": 226,
+                  "name": "SMRM X\u01af\u01a0NG 3 TR\u1ee4C 20 FEET 4 KH\u00d3A",
+                  "slug": "smrm-xuong-3t4k20f",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "33.70 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i m\u00f3c",
+                      "value": "10.670 mm"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "79 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/smrm/smrm-xuong-thang/3t4k20f/hinhdd-smrm-xuongthang-3t4k20f-1.png",
+                  "weight": 33.7,
+                  "price": null
+                },
+                {
+                  "id": 225,
+                  "name": "SMRM X\u01af\u01a0NG 3 TR\u1ee4C 45 FEET 12 KH\u00d3A",
+                  "slug": "smrm-xuong-3t12k45f",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "26.71 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i m\u00f3c",
+                      "value": "13.780 mm"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "79 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/smrm/smrm-xuong-thang/3t12k45f/hinhdd-smrm-xuongthang-3t12k45f.png",
+                  "weight": 26.71,
+                  "price": null
+                },
+                {
+                  "id": 189,
+                  "name": "SMRM X\u01af\u01a0NG 3 TR\u1ee4C 40 FEET 8 KH\u00d3A",
+                  "slug": "smrm-xuong-3t8k40f-1",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "33.26 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i m\u00f3c",
+                      "value": "12.25 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "79 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/smrm/smrm-xuong-thang/3t8k40f/hinhdd-smrm-xuongthang-3t8k40f-1.png",
+                  "weight": 33.26,
+                  "price": null
+                },
+                {
+                  "id": 187,
+                  "name": "SMRM X\u01af\u01a0NG 3 TR\u1ee4C 40 FEET 12 KH\u00d3A",
+                  "slug": "smrm-3t12k40f-1",
+                  "promotion": null,
+                  "promotion_link": "#",
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "32.8 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i m\u00f3c",
+                      "value": "12.25 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "79 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/smrm/smrm-xuong-thang/3t12k40f/hdd-smrm-xuongthang-3t12k40f.png",
+                  "weight": 32.8,
+                  "price": null
+                }
+              ]
+            },
+            {
+              "id": 62,
+              "categoryCarname": "SMRM TH\u00d9NG",
+              "categoryCarLink": null,
+              "carsCount": 2,
+              "car": [
+                {
+                  "id": 162,
+                  "name": "SMRM TH\u00d9NG T\u1ea2I L\u1eecNG",
+                  "slug": "smrm-thung-tai-lung",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "32.7 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i m\u00f3c",
+                      "value": "12.39 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "79 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/smrm/smrm-thung/tai-lung/hdd-smrm-thung-tailung.png",
+                  "weight": 32.7,
+                  "price": null
+                },
+                {
+                  "id": 163,
+                  "name": "SMRM TH\u00d9NG MUI B\u1ea0T",
+                  "slug": "smrm-thung-mui-bat",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "31.8 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i m\u00f3c",
+                      "value": "12.4 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "79 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/smrm/smrm-thung/mui-bat/hinhdd-smrm-thung-muibat.png",
+                  "weight": 31.8,
+                  "price": null
+                }
+              ]
+            },
+            {
+              "id": 63,
+              "categoryCarname": "SMRM BEN",
+              "categoryCarLink": null,
+              "carsCount": 1,
+              "car": [
+                {
+                  "id": 164,
+                  "name": "SMRM BEN",
+                  "slug": "smrm-ben-1",
+                  "promotion": null,
+                  "promotion_link": "#",
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "28.4 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i m\u00f3c",
+                      "value": "9.27 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "79 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/smrm/smrm-ben/hinhdd-smrm-ben.png",
+                  "weight": 28.4,
+                  "price": null
+                }
+              ]
+            },
+            {
+              "id": 64,
+              "categoryCarname": "SMRM CHUY\u00caN D\u1ee4NG",
+              "categoryCarLink": null,
+              "carsCount": 6,
+              "car": [
+                {
+                  "id": 165,
+                  "name": "SMRM X\u01af\u01a0NG N\u1ed8I B\u1ed8 C\u1ea2NG",
+                  "slug": "smrm-xuong-noi-bo-cang",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "32.5 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i m\u00f3c",
+                      "value": "12.6 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "79 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/banner/xe-chuyen-dung/smrm-cang/smrm-800x800.png",
+                  "weight": 32.5,
+                  "price": null
+                },
+                {
+                  "id": 166,
+                  "name": "SMRM CH\u1ede M\u00c1Y C\u00d4NG TR\u00ccNH",
+                  "slug": "smrm-cho-may-cong-trinh",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    { "title": "T\u1ea3i tr\u1ecdng", "value": "35 t\u1ea5n" },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i m\u00f3c",
+                      "value": "13.73 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "79 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/banner/xe-chuyen-dung/smrm-cho-may-cong-trinh/smrm-cho-may-cong-trinh-800x800.png",
+                  "weight": 35,
+                  "price": null
+                },
+                {
+                  "id": 167,
+                  "name": "SMRM CH\u1ede \u00d4 T\u00d4",
+                  "slug": "smrm-cho-o-to",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    { "title": "T\u1ea3i tr\u1ecdng", "value": "12 t\u1ea5n" },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i m\u00f3c",
+                      "value": "17.22 t\u1ea5n"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "79 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/banner/xe-chuyen-dung/smrm-cho-o-to/smrm-cho-o-to-800x800.png",
+                  "weight": 12,
+                  "price": null
+                },
+                {
+                  "id": 168,
+                  "name": "SMRM XI T\u00c9C CH\u1ede LPG 52M3",
+                  "slug": "smrm-xi-tec-cho-lpg-52m3",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "25.5 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i m\u00f3c",
+                      "value": "11.92 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "79 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/banner/xe-chuyen-dung/smrm-xi-tec-cho-lpg-52m3/smrm-xi-tec-cho-lpg-52m3-800x800.png",
+                  "weight": 25.5,
+                  "price": null
+                },
+                {
+                  "id": 169,
+                  "name": "SMRM XI T\u00c9C CH\u1ede X\u0102NG D\u1ea6U 42000L - H\u1ee2P KIM NH\u00d4M",
+                  "slug": "smrm-xi-tec-cho-xang-dau-42000l-hop-kim-nhom",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "31.9 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i m\u00f3c",
+                      "value": "12.07 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "79 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/banner/xe-chuyen-dung/smrm-xi-tec-cho-xang-dau-42000l/smrm-xi-tec-cho-xang-dau-42000l-800x800.png",
+                  "weight": 31.9,
+                  "price": null
+                },
+                {
+                  "id": 170,
+                  "name": "SMRM XI T\u00c9C CH\u1ede X\u0102NG D\u1ea6U 40000L - TH\u00c9P",
+                  "slug": "smrm-xi-tec-cho-xang-dau-42000l-hop-kim-nhom-1",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "29,7 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i m\u00f3c",
+                      "value": "11.36 m"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/banner/xe-chuyen-dung/smrm-xi-tec-cho-xang-dau-40000l-thep/smrm-xi-tec-cho-xang-dau-40000-800x800.png",
+                  "weight": null,
+                  "price": null
+                }
+              ]
+            }
+          ],
+          "categoryChildren": 11,
+          "productPage": {
+            "nameproducts": "S\u1ea3n ph\u1ea9m",
+            "slugproducts": "san-pham"
+          },
+          "loadShow": 1,
+          "priceShow": 1
+        }
+      }
+    ]
+  }
+}

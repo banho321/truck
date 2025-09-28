@@ -1,0 +1,384 @@
+{
+  "message": "",
+  "result": {
+    "title": "MITSUBISHI FUSO",
+    "description": null,
+    "meta": {
+      "image": "https://thacotai.vn/storage/logo/logo-san-pham/untitled-1-03-2.png"
+    },
+    "icon": "https://thacotai.vn/storage/logo/logo-2024/apdung-logo-truyenthong-web-favicon.jpg",
+    "image": "https://thacotai.vn/storage/logo/logo-san-pham/untitled-1-03-2.png",
+    "components": [
+      {
+        "name": "breadcrumb",
+        "component": "breadcrumb",
+        "data": {
+          "listBreadcrumb": [
+            { "name": "Trang chủ", "url": "/" },
+            { "name": "Sản phẩm", "url": "/san-pham" },
+            { "name": "MITSUBISHI FUSO", "url": "fuso" }
+          ]
+        }
+      },
+      {
+        "name": "Product",
+        "component": "product",
+        "data": {
+          "brands": [
+            {
+              "id": 6,
+              "name": "THACO TRUCK",
+              "slug": "thaco-truck",
+              "description": null,
+              "parent_id": 0,
+              "link": null,
+              "active": false,
+              "image": "https://thacotai.vn/storage/logo/apdung-logo-truyenthong-web-truck-phancap.jpg"
+            },
+            {
+              "id": 8,
+              "name": "KIA",
+              "slug": "kia",
+              "description": null,
+              "parent_id": 0,
+              "link": null,
+              "active": false,
+              "image": "https://thacotruck.com.vn/backend/storage/logo/logo-kia-2-3.png"
+            },
+            {
+              "id": 2,
+              "name": "MITSUBISHI FUSO",
+              "slug": "fuso",
+              "description": null,
+              "parent_id": 0,
+              "link": null,
+              "active": true,
+              "image": "https://thacotai.vn/storage/logo/logo-san-pham/untitled-1-03-2.png"
+            },
+            {
+              "id": 9,
+              "name": "SINOTRUK",
+              "slug": "sinotruk",
+              "description": null,
+              "parent_id": 0,
+              "link": null,
+              "active": false,
+              "image": "https://thacotruck.com.vn/backend/storage/logo/logo-sinotruck2-1.png"
+            },
+            {
+              "id": 11,
+              "name": "SƠ MI RƠ MOOC",
+              "slug": "somi-romooc",
+              "description": null,
+              "parent_id": 0,
+              "link": null,
+              "active": false,
+              "image": "https://thacotai.vn/storage/logo/1692774050587.jpg"
+            }
+          ],
+          "load": [
+            { "id": 1, "name": "Dưới 1 tấn", "from_load": 0, "to_load": 1 },
+            {
+              "id": 2,
+              "name": "1 tấn ≤ 2.5 tấn",
+              "from_load": 1,
+              "to_load": 2.5
+            },
+            {
+              "id": 3,
+              "name": "2.5 tấn ≤ 5 tấn",
+              "from_load": 2.5,
+              "to_load": 5
+            },
+            { "id": 4, "name": "5 tấn ≤ 8 tấn", "from_load": 5, "to_load": 8 },
+            { "id": 5, "name": "Trên 8 tấn", "from_load": 8, "to_load": 100 }
+          ],
+          "price": [
+            {
+              "id": 1,
+              "name": "Dưới 300 triệu",
+              "from_price": 0,
+              "to_price": 300000000
+            },
+            {
+              "id": 2,
+              "name": "300 triệu ≤ 500 triệu",
+              "from_price": 300000000,
+              "to_price": 500000000
+            },
+            {
+              "id": 3,
+              "name": "500 triệu ≤ 700 triệu",
+              "from_price": 500000000,
+              "to_price": 700000000
+            },
+            {
+              "id": 4,
+              "name": "700 triệu ≤ 900 triệu",
+              "from_price": 700000000,
+              "to_price": 900000000
+            },
+            {
+              "id": 5,
+              "name": "Trên 900 triệu",
+              "from_price": 900000000,
+              "to_price": 10000000000
+            }
+          ],
+          "listCategories": [
+            {
+              "id": 10,
+              "name": "Tải nhẹ máy xăng",
+              "slug": null,
+              "categories": null
+            },
+            {
+              "id": 11,
+              "name": "Tải nhẹ máy dầu",
+              "slug": null,
+              "categories": null
+            },
+            { "id": 12, "name": "Tải van", "slug": null, "categories": null },
+            { "id": 13, "name": "Tải trung", "slug": null, "categories": null },
+            { "id": 15, "name": "Ben trung", "slug": null, "categories": null },
+            { "id": 16, "name": "Ben nặng", "slug": null, "categories": null },
+            { "id": 17, "name": "Đầu kéo", "slug": null, "categories": null },
+            {
+              "id": 18,
+              "name": "Xe chuyên dụng",
+              "slug": null,
+              "categories": null
+            },
+            {
+              "id": 19,
+              "name": "Sơ Mi Rơ Mooc",
+              "slug": null,
+              "categories": null
+            }
+          ],
+          "cars": [
+            {
+              "id": 12,
+              "categoryCarname": "MITSUBISHI FUSO CANTER",
+              "categoryCarLink": null,
+              "carsCount": 3,
+              "car": [
+                {
+                  "id": 10,
+                  "name": "Fuso Canter TF4.9",
+                  "slug": "mitsubishi-fuso-canter-tf49",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    { "title": "Tải trọng", "value": "1.99 tấn" },
+                    { "title": "Chiều dài thùng", "value": "4.45 m" },
+                    { "title": "Dịch vụ 24/7", "value": "76 xưởng" }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/fuso/tf-49/hdd-canter-tf49-1.png",
+                  "weight": 1.99,
+                  "price": 615000000
+                },
+                {
+                  "id": 76,
+                  "name": "Fuso Canter TF7.5",
+                  "slug": "mitsubishi-fuso-canter-tf75",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    { "title": "Tải trọng", "value": "3.49 tấn" },
+                    { "title": "Chiều dài thùng", "value": "5.2 m" },
+                    { "title": "Dịch vụ 24/7", "value": "76 xưởng" }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/fuso/tf75/hdd-canter-tf75-1.png",
+                  "weight": 3.49,
+                  "price": 659000000
+                },
+                {
+                  "id": 78,
+                  "name": "Fuso Canter TF8.5L",
+                  "slug": "mitsubishi-fuso-canter-tf85l",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    { "title": "Tải trọng", "value": "4.4 tấn" },
+                    { "title": "Chiều dài thùng", "value": "6.2 m" },
+                    { "title": "Dịch vụ 24/7", "value": "76 xưởng" }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/fuso/tf85l/hdd-canter-tf85l-2.png",
+                  "weight": 4.7,
+                  "price": 695000000
+                }
+              ]
+            },
+            {
+              "id": 53,
+              "categoryCarname": "MITSUBISHI FUSO FA/FI",
+              "categoryCarLink": null,
+              "carsCount": 4,
+              "car": [
+                {
+                  "id": 81,
+                  "name": "Fuso FA140",
+                  "slug": "mitsubishi-fuso-fa140",
+                  "promotion": null,
+                  "promotion_link": "#",
+                  "basic_specification": [
+                    { "title": "Tải trọng", "value": "6.7 tấn" },
+                    { "title": "Chiều dài thùng", "value": "5.25 m" },
+                    { "title": "Dịch vụ 24/7", "value": "76 xưởng" }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/fuso/fa140/hdd-fuso-fa140.png",
+                  "weight": 6.7,
+                  "price": 705000000
+                },
+                {
+                  "id": 99,
+                  "name": "Fuso FA140L",
+                  "slug": "mitsubishi-fuso-fa-140l",
+                  "promotion": null,
+                  "promotion_link": "#",
+                  "basic_specification": [
+                    { "title": "Tải trọng", "value": "6.45 tấn" },
+                    { "title": "Chiều dài thùng", "value": "6.1 m" },
+                    { "title": "Dịch vụ 24/7", "value": "76 xưởng" }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/fuso/fuso-fa/fa-140l/hdd-fuso-fa140l.png",
+                  "weight": 6.45,
+                  "price": 729000000
+                },
+                {
+                  "id": 82,
+                  "name": "Fuso FI170",
+                  "slug": "mitsubishi-fuso-fi170",
+                  "promotion": null,
+                  "promotion_link": "#",
+                  "basic_specification": [
+                    { "title": "Tải trọng", "value": "8.3 tấn" },
+                    { "title": "Chiều dài thùng", "value": "6.1 m" },
+                    { "title": "Dịch vụ 24/7", "value": "76 xưởng" }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/fuso/fuso-fi/hdd-fuso-fi170.png",
+                  "weight": 8.3,
+                  "price": 815000000
+                },
+                {
+                  "id": 100,
+                  "name": "Fuso FI170L",
+                  "slug": "mitsubishi-fuso-fi-170l",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    { "title": "Tải trọng", "value": "8.2 tấn" },
+                    { "title": "Chiều dài thùng", "value": "6.85 m" },
+                    { "title": "Dịch vụ 24/7", "value": "76 xưởng" }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/fuso/fuso-fi170l/hdd-fi170l.png",
+                  "weight": 8.2,
+                  "price": 859000000
+                }
+              ]
+            },
+            {
+              "id": 54,
+              "categoryCarname": "MITSUBISHI FUSO FJ",
+              "categoryCarLink": null,
+              "carsCount": 1,
+              "car": [
+                {
+                  "id": 83,
+                  "name": "Fuso FJ285",
+                  "slug": "mitsubishi-fuso-fj285",
+                  "promotion": null,
+                  "promotion_link": "#",
+                  "basic_specification": [
+                    { "title": "Tải trọng", "value": "14.2 tấn" },
+                    { "title": "Chiều dài thùng", "value": "9.1 m" },
+                    { "title": "Dịch vụ 24/7", "value": "76 xưởng" }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/fuso/fj285/fj-285-800x800.png",
+                  "weight": 14.2,
+                  "price": 1489000000
+                }
+              ]
+            },
+            {
+              "id": 81,
+              "categoryCarname": "XE CHUYÊN DỤNG",
+              "categoryCarLink": null,
+              "carsCount": 4,
+              "car": [
+                {
+                  "id": 89,
+                  "name": "Xe đông lạnh Mitsubishi Fuso Canter TF4.9",
+                  "slug": "xe-dong-lanh-mitsubishi-fuso-canter-499",
+                  "promotion": null,
+                  "promotion_link": "#",
+                  "basic_specification": [
+                    { "title": "Tải trọng", "value": "1,8 tấn" },
+                    { "title": "Thể tích thùng", "value": "13,5 m3" },
+                    { "title": "Dịch vụ 24/7", "value": "79 xưởng" }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/xe-chuyen-dung/xe-dl-fuso-can-ter-tf49-dl1/hdd-tf49-thermal-master.png",
+                  "weight": 1.85,
+                  "price": null
+                },
+                {
+                  "id": 213,
+                  "name": "Xe đông lạnh Mitsubishi Fuso Canter TF7.5 DL1",
+                  "slug": "xe-dong-lanh-mitsubishi-fuso-canter-tf75-dl1",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    { "title": "Tải trọng", "value": "3.49 tấn" },
+                    { "title": "Thể tích thùng", "value": "20,53 m3" },
+                    { "title": "Dịch vụ 24/7", "value": "79 xưởng" }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/xe-chuyen-dung/xe-dong-lanh-fuso-tf75/hdd-canter-tf75-dl1.png",
+                  "weight": 3.49,
+                  "price": null
+                },
+                {
+                  "id": 212,
+                  "name": "Xe thùng kín cánh dơi MITSUBISHI FUSO CANTER TF7.5",
+                  "slug": "xe-thung-kin-canh-doi-fuso-canter",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    { "title": "Tải trọng", "value": "3.1 tấn" },
+                    { "title": "Chiều dài thùng", "value": "5.2 m" },
+                    { "title": "Dịch vụ 24/7", "value": "79 xưởng" }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/xe-chuyen-dung/xe-canh-doi-fuso-canter-tf75/hinhdd-xechuyendung-canhdoi-tf75.png",
+                  "weight": 3.1,
+                  "price": null
+                },
+                {
+                  "id": 198,
+                  "name": "Xe đông lạnh Mitsubishi Fuso Canter TF4.9 DL2",
+                  "slug": "xe-dong-lanh-fuso",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    { "title": "Tải trọng", "value": "1,85 tấn" },
+                    { "title": "Thể tích thùng", "value": "13,5 m3" },
+                    { "title": "Dịch vụ 24/7", "value": "79 xưởng" }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/xe-chuyen-dung/xe-dl-fuso-canter-tf75/hdd-tf-49-carrier.png",
+                  "weight": 1.85,
+                  "price": null
+                }
+              ]
+            }
+          ],
+          "categoryChildren": 2,
+          "productPage": {
+            "nameproducts": "Sản phẩm",
+            "slugproducts": "san-pham"
+          },
+          "loadShow": 1,
+          "priceShow": 1
+        }
+      }
+    ]
+  }
+}

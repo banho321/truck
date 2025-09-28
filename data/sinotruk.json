@@ -1,0 +1,313 @@
+{
+  "message": "",
+  "result": {
+    "title": "SINOTRUK",
+    "description": null,
+    "meta": {
+      "image": "https://thacotruck.com.vn/backend/storage/logo/logo-sinotruck2-1.png"
+    },
+    "icon": "https://thacotai.vn/storage/logo/logo-2024/apdung-logo-truyenthong-web-favicon.jpg",
+    "image": "https://thacotruck.com.vn/backend/storage/logo/logo-sinotruck2-1.png",
+    "components": [
+      {
+        "name": "breadcrumb",
+        "component": "breadcrumb",
+        "data": {
+          "listBreadcrumb": [
+            { "name": "Trang ch\u1ee7", "url": "/" },
+            { "name": "S\u1ea3n ph\u1ea9m", "url": "/san-pham" },
+            { "name": "SINOTRUK", "url": "sinotruk" }
+          ]
+        }
+      },
+      {
+        "name": "Product",
+        "component": "product",
+        "data": {
+          "brands": [
+            {
+              "id": 6,
+              "name": "THACO TRUCK",
+              "slug": "thaco-truck",
+              "description": null,
+              "parent_id": 0,
+              "link": null,
+              "active": false,
+              "image": "https://thacotai.vn/storage/logo/apdung-logo-truyenthong-web-truck-phancap.jpg"
+            },
+            {
+              "id": 8,
+              "name": "KIA",
+              "slug": "kia",
+              "description": null,
+              "parent_id": 0,
+              "link": null,
+              "active": false,
+              "image": "https://thacotruck.com.vn/backend/storage/logo/logo-kia-2-3.png"
+            },
+            {
+              "id": 2,
+              "name": "MITSUBISHI FUSO",
+              "slug": "fuso",
+              "description": null,
+              "parent_id": 0,
+              "link": null,
+              "active": false,
+              "image": "https://thacotai.vn/storage/logo/logo-san-pham/untitled-1-03-2.png"
+            },
+            {
+              "id": 9,
+              "name": "SINOTRUK",
+              "slug": "sinotruk",
+              "description": null,
+              "parent_id": 0,
+              "link": null,
+              "active": true,
+              "image": "https://thacotruck.com.vn/backend/storage/logo/logo-sinotruck2-1.png"
+            },
+            {
+              "id": 11,
+              "name": "S\u01a0 MI R\u01a0 MOOC",
+              "slug": "somi-romooc",
+              "description": null,
+              "parent_id": 0,
+              "link": null,
+              "active": false,
+              "image": "https://thacotai.vn/storage/logo/1692774050587.jpg"
+            }
+          ],
+          "load": [
+            {
+              "id": 1,
+              "name": "D\u01b0\u1edbi 1 t\u1ea5n",
+              "from_load": 0,
+              "to_load": 1
+            },
+            {
+              "id": 2,
+              "name": "1 t\u1ea5n \u2264 2.5 t\u1ea5n",
+              "from_load": 1,
+              "to_load": 2.5
+            },
+            {
+              "id": 3,
+              "name": "2.5 t\u1ea5n \u2264 5 t\u1ea5n",
+              "from_load": 2.5,
+              "to_load": 5
+            },
+            {
+              "id": 4,
+              "name": "5 t\u1ea5n \u2264 8 t\u1ea5n",
+              "from_load": 5,
+              "to_load": 8
+            },
+            {
+              "id": 5,
+              "name": "Tr\u00ean 8 t\u1ea5n",
+              "from_load": 8,
+              "to_load": 100
+            }
+          ],
+          "price": [
+            {
+              "id": 1,
+              "name": "D\u01b0\u1edbi 300 tri\u1ec7u",
+              "from_price": 0,
+              "to_price": 300000000
+            },
+            {
+              "id": 2,
+              "name": "300 tri\u1ec7u \u2264 500 tri\u1ec7u",
+              "from_price": 300000000,
+              "to_price": 500000000
+            },
+            {
+              "id": 3,
+              "name": "500 tri\u1ec7u \u2264 700 tri\u1ec7u",
+              "from_price": 500000000,
+              "to_price": 700000000
+            },
+            {
+              "id": 4,
+              "name": "700 tri\u1ec7u \u2264 900 tri\u1ec7u",
+              "from_price": 700000000,
+              "to_price": 900000000
+            },
+            {
+              "id": 5,
+              "name": "Tr\u00ean 900 tri\u1ec7u",
+              "from_price": 900000000,
+              "to_price": 10000000000
+            }
+          ],
+          "listCategories": [
+            {
+              "id": 10,
+              "name": "T\u1ea3i nh\u1eb9 m\u00e1y x\u0103ng",
+              "slug": null,
+              "categories": null
+            },
+            {
+              "id": 11,
+              "name": "T\u1ea3i nh\u1eb9 m\u00e1y d\u1ea7u",
+              "slug": null,
+              "categories": null
+            },
+            {
+              "id": 12,
+              "name": "T\u1ea3i van",
+              "slug": null,
+              "categories": null
+            },
+            {
+              "id": 13,
+              "name": "T\u1ea3i trung",
+              "slug": null,
+              "categories": null
+            },
+            { "id": 15, "name": "Ben trung", "slug": null, "categories": null },
+            {
+              "id": 16,
+              "name": "Ben n\u1eb7ng",
+              "slug": null,
+              "categories": null
+            },
+            {
+              "id": 17,
+              "name": "\u0110\u1ea7u k\u00e9o",
+              "slug": null,
+              "categories": null
+            },
+            {
+              "id": 18,
+              "name": "Xe chuy\u00ean d\u1ee5ng",
+              "slug": null,
+              "categories": null
+            },
+            {
+              "id": 19,
+              "name": "S\u01a1 Mi R\u01a1 Mooc",
+              "slug": null,
+              "categories": null
+            }
+          ],
+          "cars": [
+            {
+              "id": 30,
+              "categoryCarname": "BEN N\u1eb6NG HOWO TX",
+              "categoryCarLink": null,
+              "carsCount": 2,
+              "car": [
+                {
+                  "id": 43,
+                  "name": "HOWO TX D600",
+                  "slug": "tx-d600",
+                  "promotion": null,
+                  "promotion_link": "#",
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "8.77 t\u1ea5n"
+                    },
+                    { "title": "Th\u00f9ng ben", "value": "7.3 kh\u1ed1i" },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "76 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/sinotruck/tx-600/tx-d600-800x800px.png",
+                  "weight": 8.77,
+                  "price": 1529000000
+                },
+                {
+                  "id": 124,
+                  "name": "HOWO TX D800",
+                  "slug": "howo-tx-d800",
+                  "promotion": null,
+                  "promotion_link": "#",
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "12.72 t\u1ea5n"
+                    },
+                    { "title": "Th\u00f9ng ben", "value": "10.6 kh\u1ed1i" },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "76 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/sinotruck/tx-800/tx-d800-800x800px.png",
+                  "weight": 12.72,
+                  "price": 1659000000
+                }
+              ]
+            },
+            {
+              "id": 74,
+              "categoryCarname": "\u0110\u1ea6U K\u00c9O SINOTRUK",
+              "categoryCarLink": null,
+              "carsCount": 2,
+              "car": [
+                {
+                  "id": 247,
+                  "name": "SINOTRUK 4x2",
+                  "slug": "sinotruk-4x2",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "9,63 T\u1ea5n"
+                    },
+                    {
+                      "title": "Kh\u1ed1i l\u01b0\u1ee3ng k\u00e9o theo",
+                      "value": "33,63 T\u1ea5n"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "76 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/hinh-chi-tiet-san-pham/sinotruk/hdd-howo-nx-1.png",
+                  "weight": 9.63,
+                  "price": null
+                },
+                {
+                  "id": 248,
+                  "name": "SINOTRUK 6x4",
+                  "slug": "sinotruk-6x4",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "14,735 T\u1ea5n"
+                    },
+                    {
+                      "title": "Kh\u1ed1i l\u01b0\u1ee3ng k\u00e9o theo",
+                      "value": "38,735 T\u1ea5n"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "76 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/hinh-chi-tiet-san-pham/sinotruk/hdd-howo-max-1.png",
+                  "weight": null,
+                  "price": null
+                }
+              ]
+            }
+          ],
+          "categoryChildren": 9,
+          "productPage": {
+            "nameproducts": "S\u1ea3n ph\u1ea9m",
+            "slugproducts": "san-pham"
+          },
+          "loadShow": 1,
+          "priceShow": 1
+        }
+      }
+    ]
+  }
+}

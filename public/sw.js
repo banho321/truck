@@ -7,7 +7,7 @@ const urlsToCache = [
   '/contact',
   '/styles/global.css',
   '/scripts/lazy-loading.js',
-  '/logo.svg',
+  '/logo.png',
   '/favicon.svg'
 ];
 

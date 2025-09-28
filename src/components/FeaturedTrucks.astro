@@ -1,7 +1,9 @@
 ---
 // Featured trucks section
-import { getFeaturedTrucks, getSpecValue } from '../data/trucksData';
+import { getFeaturedTrucks, getSpecValue, loadTrucksData } from '../data/trucksData';
 
+// Load data first, then get featured trucks
+loadTrucksData();
 const featuredTrucks = getFeaturedTrucks();
 ---
 

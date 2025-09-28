@@ -1,0 +1,821 @@
+{
+  "message": "",
+  "result": {
+    "title": "THACO TRUCK",
+    "description": null,
+    "meta": {
+      "image": "https://thacotai.vn/storage/logo/apdung-logo-truyenthong-web-truck-phancap.jpg"
+    },
+    "icon": "https://thacotai.vn/storage/logo/logo-2024/apdung-logo-truyenthong-web-favicon.jpg",
+    "image": "https://thacotai.vn/storage/logo/apdung-logo-truyenthong-web-truck-phancap.jpg",
+    "components": [
+      {
+        "name": "breadcrumb",
+        "component": "breadcrumb",
+        "data": {
+          "listBreadcrumb": [
+            { "name": "Trang ch\u1ee7", "url": "/" },
+            { "name": "S\u1ea3n ph\u1ea9m", "url": "/san-pham" },
+            { "name": "THACO TRUCK", "url": "thaco-truck" }
+          ]
+        }
+      },
+      {
+        "name": "Product",
+        "component": "product",
+        "data": {
+          "brands": [
+            {
+              "id": 6,
+              "name": "THACO TRUCK",
+              "slug": "thaco-truck",
+              "description": null,
+              "parent_id": 0,
+              "link": null,
+              "active": true,
+              "image": "https://thacotai.vn/storage/logo/apdung-logo-truyenthong-web-truck-phancap.jpg"
+            },
+            {
+              "id": 8,
+              "name": "KIA",
+              "slug": "kia",
+              "description": null,
+              "parent_id": 0,
+              "link": null,
+              "active": false,
+              "image": "https://thacotruck.com.vn/backend/storage/logo/logo-kia-2-3.png"
+            },
+            {
+              "id": 2,
+              "name": "MITSUBISHI FUSO",
+              "slug": "fuso",
+              "description": null,
+              "parent_id": 0,
+              "link": null,
+              "active": false,
+              "image": "https://thacotai.vn/storage/logo/logo-san-pham/untitled-1-03-2.png"
+            },
+            {
+              "id": 9,
+              "name": "SINOTRUK",
+              "slug": "sinotruk",
+              "description": null,
+              "parent_id": 0,
+              "link": null,
+              "active": false,
+              "image": "https://thacotruck.com.vn/backend/storage/logo/logo-sinotruck2-1.png"
+            },
+            {
+              "id": 11,
+              "name": "S\u01a0 MI R\u01a0 MOOC",
+              "slug": "somi-romooc",
+              "description": null,
+              "parent_id": 0,
+              "link": null,
+              "active": false,
+              "image": "https://thacotai.vn/storage/logo/1692774050587.jpg"
+            }
+          ],
+          "load": [
+            {
+              "id": 1,
+              "name": "D\u01b0\u1edbi 1 t\u1ea5n",
+              "from_load": 0,
+              "to_load": 1
+            },
+            {
+              "id": 2,
+              "name": "1 t\u1ea5n \u2264 2.5 t\u1ea5n",
+              "from_load": 1,
+              "to_load": 2.5
+            },
+            {
+              "id": 3,
+              "name": "2.5 t\u1ea5n \u2264 5 t\u1ea5n",
+              "from_load": 2.5,
+              "to_load": 5
+            },
+            {
+              "id": 4,
+              "name": "5 t\u1ea5n \u2264 8 t\u1ea5n",
+              "from_load": 5,
+              "to_load": 8
+            },
+            {
+              "id": 5,
+              "name": "Tr\u00ean 8 t\u1ea5n",
+              "from_load": 8,
+              "to_load": 100
+            }
+          ],
+          "price": [
+            {
+              "id": 1,
+              "name": "D\u01b0\u1edbi 300 tri\u1ec7u",
+              "from_price": 0,
+              "to_price": 300000000
+            },
+            {
+              "id": 2,
+              "name": "300 tri\u1ec7u \u2264 500 tri\u1ec7u",
+              "from_price": 300000000,
+              "to_price": 500000000
+            },
+            {
+              "id": 3,
+              "name": "500 tri\u1ec7u \u2264 700 tri\u1ec7u",
+              "from_price": 500000000,
+              "to_price": 700000000
+            },
+            {
+              "id": 4,
+              "name": "700 tri\u1ec7u \u2264 900 tri\u1ec7u",
+              "from_price": 700000000,
+              "to_price": 900000000
+            },
+            {
+              "id": 5,
+              "name": "Tr\u00ean 900 tri\u1ec7u",
+              "from_price": 900000000,
+              "to_price": 10000000000
+            }
+          ],
+          "listCategories": [
+            {
+              "id": 10,
+              "name": "T\u1ea3i nh\u1eb9 m\u00e1y x\u0103ng",
+              "slug": null,
+              "categories": null
+            },
+            {
+              "id": 11,
+              "name": "T\u1ea3i nh\u1eb9 m\u00e1y d\u1ea7u",
+              "slug": null,
+              "categories": null
+            },
+            {
+              "id": 12,
+              "name": "T\u1ea3i van",
+              "slug": null,
+              "categories": null
+            },
+            {
+              "id": 13,
+              "name": "T\u1ea3i trung",
+              "slug": null,
+              "categories": null
+            },
+            { "id": 15, "name": "Ben trung", "slug": null, "categories": null },
+            {
+              "id": 16,
+              "name": "Ben n\u1eb7ng",
+              "slug": null,
+              "categories": null
+            },
+            {
+              "id": 17,
+              "name": "\u0110\u1ea7u k\u00e9o",
+              "slug": null,
+              "categories": null
+            },
+            {
+              "id": 18,
+              "name": "Xe chuy\u00ean d\u1ee5ng",
+              "slug": null,
+              "categories": null
+            },
+            {
+              "id": 19,
+              "name": "S\u01a1 Mi R\u01a1 Mooc",
+              "slug": null,
+              "categories": null
+            }
+          ],
+          "cars": [
+            {
+              "id": 20,
+              "categoryCarname": "THACO TOWNER VAN",
+              "categoryCarLink": null,
+              "carsCount": 5,
+              "car": [
+                {
+                  "id": 171,
+                  "name": "TF420V 2S",
+                  "slug": "thaco-tf420v",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "0.945 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i th\u00f9ng",
+                      "value": "2.325 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "76 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/thacotruck/tf420v-1/hinhdd-thaco-frontier-tf420-2s-1.png",
+                  "weight": 0.945,
+                  "price": 285000000
+                },
+                {
+                  "id": 180,
+                  "name": "TF450V 2S",
+                  "slug": "thaco-tf450v-2s",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "0.945 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i th\u00f9ng",
+                      "value": "2.62 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "76 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/thacotruck/tf450/hinhdd-thaco-frontier-tf450-2s.png",
+                  "weight": 0.945,
+                  "price": 309000000
+                },
+                {
+                  "id": 181,
+                  "name": "TF450V 5S",
+                  "slug": "thaco-tf450v-5s",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "0.75 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i th\u00f9ng",
+                      "value": "1.6 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "76 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/thacotruck/tf450/hinhdd-thaco-frontier-tf450-5s-1.png",
+                  "weight": 0.75,
+                  "price": 355000000
+                },
+                {
+                  "id": 183,
+                  "name": "TF480V 2S",
+                  "slug": "thaco-tf480v-2s",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "0.945 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i th\u00f9ng",
+                      "value": "2.925 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "76 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/thacotruck/tf480v/hinhdd-thaco-frontier-tf480-2s.png",
+                  "weight": 0.945,
+                  "price": 335000000
+                },
+                {
+                  "id": 182,
+                  "name": "TF480V 5S",
+                  "slug": "thaco-tf480v-5s",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "0.75 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i th\u00f9ng",
+                      "value": "1.905 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "76 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/thacotruck/tf480v/hinhdd-thaco-frontier-tf480-5s.png",
+                  "weight": 0.75,
+                  "price": 385000000
+                }
+              ]
+            },
+            {
+              "id": 69,
+              "categoryCarname": "THACO TOWNER T\u1ea2I",
+              "categoryCarLink": null,
+              "carsCount": 3,
+              "car": [
+                {
+                  "id": 192,
+                  "name": "TF220",
+                  "slug": "thaco-tf220",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "0.99 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i th\u00f9ng",
+                      "value": "2.3 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "76 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/hinh-chi-tiet-san-pham/tf220/hdd-tf220-1.png",
+                  "weight": 0.99,
+                  "price": 219000000
+                },
+                {
+                  "id": 257,
+                  "name": "TF230",
+                  "slug": "thaco-tf230",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "0.99 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i th\u00f9ng",
+                      "value": "2.8 m"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/hinh-chi-tiet-san-pham/tf230/banner/hdd-tf230-1.png",
+                  "weight": 0.99,
+                  "price": 219000000
+                },
+                {
+                  "id": 193,
+                  "name": "TF240",
+                  "slug": "thaco-tf240",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "0,99 / 1,28 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i th\u00f9ng",
+                      "value": "3.250 m"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/hinh-chi-tiet-san-pham/tf240/hdd-tf240.png",
+                  "weight": 1.28,
+                  "price": null
+                }
+              ]
+            },
+            {
+              "id": 21,
+              "categoryCarname": "TF",
+              "categoryCarLink": null,
+              "carsCount": 1,
+              "car": [
+                {
+                  "id": 29,
+                  "name": "TF2800",
+                  "slug": "thaco-tf2800",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "1.99 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i th\u00f9ng",
+                      "value": "3.5 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "76 X\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/thacotruck/tf2800/hdd-thaco-frontier-tf2800.png",
+                  "weight": 1.99,
+                  "price": 309000000
+                }
+              ]
+            },
+            {
+              "id": 73,
+              "categoryCarname": "T\u1ea2I TRUNG THACO LINKER",
+              "categoryCarLink": null,
+              "carsCount": 9,
+              "car": [
+                {
+                  "id": 239,
+                  "name": "THACO Linker T2-5.0",
+                  "slug": "thaco-linker-t2-50",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "1,49/1,99 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i th\u00f9ng",
+                      "value": "3,620 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "76 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/hinh-chi-tiet-san-pham/linker/linker-50/banner-hdd-linker-t2-5-1.png",
+                  "weight": 1.9,
+                  "price": 380000000
+                },
+                {
+                  "id": 240,
+                  "name": "THACO Linker T2-6.5",
+                  "slug": "thaco-linker-t2-65",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "1,99 / 3,49 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i th\u00f9ng",
+                      "value": "4,45 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "76 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/hinh-chi-tiet-san-pham/linker/linker-65/banner-hdd-linker-t2-65-1.png",
+                  "weight": 1.99,
+                  "price": 420000000
+                },
+                {
+                  "id": 246,
+                  "name": "THACO Linker T2-7.5",
+                  "slug": "thaco-linker-t2-75",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "3,49 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i th\u00f9ng",
+                      "value": "5,2 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "76 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/hinh-chi-tiet-san-pham/linker/linker-75/banner-hdd-linker-t2-75.png",
+                  "weight": 3.49,
+                  "price": 550000000
+                },
+                {
+                  "id": 244,
+                  "name": "THACO Linker T2-12",
+                  "slug": "thaco-linker-t2-12-1",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    { "title": "T\u1ea3i tr\u1ecdng", "value": "7,7 t\u1ea5n" },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i th\u00f9ng",
+                      "value": "6,3 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "76 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/hinh-chi-tiet-san-pham/linker/linker-12/banner-hdd-linker-t2-12.png",
+                  "weight": 7.7,
+                  "price": 550000000
+                },
+                {
+                  "id": 241,
+                  "name": "THACO Linker T2-12",
+                  "slug": "thaco-linker-t2-12",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    { "title": "T\u1ea3i tr\u1ecdng", "value": "7.8 t\u1ea5n" },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i th\u00f9ng",
+                      "value": "5,2 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "76 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/hinh-chi-tiet-san-pham/linker/linker-12/banner-hdd-linker-t2-12.png",
+                  "weight": 7.8,
+                  "price": 550000000
+                },
+                {
+                  "id": 245,
+                  "name": "THACO Linker T2-16",
+                  "slug": "thaco-linker-t2-16-1",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    { "title": "T\u1ea3i tr\u1ecdng", "value": "7,8 t\u1ea5n" },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i th\u00f9ng",
+                      "value": "9,9 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "76 x\u01b0\u1edfng"
+                    },
+                    { "title": null, "value": null }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/hinh-chi-tiet-san-pham/linker/linker-16/banner-hdd-linker-t2-16-1.png",
+                  "weight": 7.8,
+                  "price": 900000000
+                },
+                {
+                  "id": 243,
+                  "name": "THACO Linker T2-16",
+                  "slug": "thaco-linker-t2-16",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    { "title": "T\u1ea3i tr\u1ecdng", "value": "8,5 t\u1ea5n" },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i th\u00f9ng",
+                      "value": "8,8 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "76 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/hinh-chi-tiet-san-pham/linker/linker-16/banner-hdd-linker-t2-16-1.png",
+                  "weight": 8.5,
+                  "price": 900000000
+                },
+                {
+                  "id": 242,
+                  "name": "THACO Linker T2-13",
+                  "slug": "thaco-linker-t2-13",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    { "title": "T\u1ea3i tr\u1ecdng", "value": "7,5 t\u1ea5n" },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i th\u00f9ng",
+                      "value": "6,9 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "76 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/hinh-chi-tiet-san-pham/linker/linker-13/banner-hdd-linker-t2-13.png",
+                  "weight": 7.5,
+                  "price": 729000000
+                },
+                {
+                  "id": 256,
+                  "name": "THACO LINKER T2-24",
+                  "slug": "thaco-linker-t2-24",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "14,7 T\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i th\u00f9ng",
+                      "value": "9,9 m"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/hinh-chi-tiet-san-pham/linker/linker-24/hdd-linker-t2-24.png",
+                  "weight": 14.7,
+                  "price": null
+                }
+              ]
+            },
+            {
+              "id": 78,
+              "categoryCarname": "T\u1ea2I BEN THACO LINKER",
+              "categoryCarLink": null,
+              "carsCount": 5,
+              "car": [
+                {
+                  "id": 251,
+                  "name": "THACO LINKER T3-5.0",
+                  "slug": "thaco-linker-t3-50",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "1,99 t\u1ea5n"
+                    },
+                    {
+                      "title": "Th\u1ec3 t\u00edch th\u00f9ng",
+                      "value": "2 m\u00b3"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/hinh-chi-tiet-san-pham/xe-ben-linker/t3-50/hdd-linker-t3-50.png",
+                  "weight": 1.99,
+                  "price": null
+                },
+                {
+                  "id": 252,
+                  "name": "THACO LINKER T3-6.5",
+                  "slug": "thaco-linker-t3-65",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "3,49 t\u1ea5n"
+                    },
+                    {
+                      "title": "Th\u1ec3 t\u00edch th\u00f9ng",
+                      "value": "2,9 m\u00b3"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/hinh-chi-tiet-san-pham/xe-ben-linker/t3-65/hdd-linker-t3-65.png",
+                  "weight": 3.49,
+                  "price": null
+                },
+                {
+                  "id": 253,
+                  "name": "THACO LINKER T3-9.0",
+                  "slug": "thaco-linker-t3-90",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "4,99 t\u1ea5n"
+                    },
+                    {
+                      "title": "Th\u1ec3 t\u00edch th\u00f9ng",
+                      "value": "4 m\u00b3"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/hinh-chi-tiet-san-pham/xe-ben-linker/t3-90/hdd-linker-t390.png",
+                  "weight": 4.99,
+                  "price": null
+                },
+                {
+                  "id": 254,
+                  "name": "THACO LINKER T3-12",
+                  "slug": "thaco-linker-t3-12",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    { "title": "T\u1ea3i tr\u1ecdng", "value": "7,5 t\u1ea5n" },
+                    {
+                      "title": "Th\u1ec3 t\u00edch th\u00f9ng",
+                      "value": "6 m\u00b3"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/hinh-chi-tiet-san-pham/xe-ben-linker/t3-12/hdd-linker-t3-12.png",
+                  "weight": 7.5,
+                  "price": null
+                },
+                {
+                  "id": 255,
+                  "name": "THACO LINKER T3-16",
+                  "slug": "thaco-linker-t3-16",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    { "title": "T\u1ea3i tr\u1ecdng", "value": "8,6 t\u1ea5n" },
+                    {
+                      "title": "Th\u1ec3 t\u00edch th\u00f9ng",
+                      "value": "7 m\u00b3"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/hinh-chi-tiet-san-pham/xe-ben-linker/t3-16/hdd-linker-t3-16.png",
+                  "weight": 8.6,
+                  "price": null
+                }
+              ]
+            },
+            {
+              "id": 79,
+              "categoryCarname": "XE CHUY\u00caN D\u1ee4NG",
+              "categoryCarLink": null,
+              "carsCount": 3,
+              "car": [
+                {
+                  "id": 224,
+                  "name": "TF230 B\u00c1N H\u00c0NG L\u01afU \u0110\u1ed8NG",
+                  "slug": "thaco-tf230-ban-hang-luu-dong",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    { "title": "T\u1ea3i tr\u1ecdng", "value": "720 kg" },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i th\u00f9ng",
+                      "value": "2.8 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "79 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/thacotruck/tf230-ban-hang-luu-dong/hdd-tf230-bhld.png",
+                  "weight": 0.72,
+                  "price": 249000000
+                },
+                {
+                  "id": 223,
+                  "name": "TF220 B\u00c1N H\u00c0NG L\u01afU \u0110\u1ed8NG",
+                  "slug": "thaco-tf220-ban-hang-luu-dong",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    { "title": "T\u1ea3i tr\u1ecdng", "value": "810 Kg" },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i th\u00f9ng",
+                      "value": "2.3 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "79 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/thacotruck/tf220-ban-hang-luu-dong/hdd-tf220-bhld.png",
+                  "weight": 0.81,
+                  "price": 219000000
+                },
+                {
+                  "id": 222,
+                  "name": "Xe \u0111\u00f4ng l\u1ea1nh THACO TOWNER VAN TF420V",
+                  "slug": "thaco-tf420-donglanh",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "0,945 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i th\u00f9ng",
+                      "value": "1,8 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "79 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/thacotruck/tf420-dong-lanh/hdd-tf420v-donglanh.png",
+                  "weight": 0.945,
+                  "price": null
+                }
+              ]
+            }
+          ],
+          "categoryChildren": 6,
+          "productPage": {
+            "nameproducts": "S\u1ea3n ph\u1ea9m",
+            "slugproducts": "san-pham"
+          },
+          "loadShow": 1,
+          "priceShow": 1
+        }
+      }
+    ]
+  }
+}

@@ -3,268 +3,239 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import TruckCard from '../../components/TruckCard.astro';
-import TruckFilters from '../../components/TruckFilters.astro';
-import { getAllTrucks, uniqueBrands, getTrucksByBrand, brands } from '../../data/trucksData';
+import { getAllTrucks, getSpecValue, loadTrucksData } from '../../data/trucksData';
 
-const allTrucks = getAllTrucks();
+// Load data and get trucks
+const trucksData = loadTrucksData();
+const trucks = getAllTrucks();
+
+// Group trucks by category (as per original structure)
+// Sort categories to prioritize THACO TRUCK first
+const trucksByCategory = trucksData.cars ? trucksData.cars
+  .map(category => ({
+    id: category.id,
+    name: category.categoryCarname,
+    trucks: category.car || [],
+    // Add brand info for better identification
+    brand: category.car && category.car.length > 0 ? 
+      (category.car[0].brand || category.categoryCarname.split(' ')[0]) : 
+      'Unknown'
+  }))
+  .sort((a, b) => {
+    // Prioritize THACO categories first
+    const aIsThaco = a.name.toUpperCase().includes('THACO');
+    const bIsThaco = b.name.toUpperCase().includes('THACO');
+    
+    if (aIsThaco && !bIsThaco) return -1;
+    if (!aIsThaco && bIsThaco) return 1;
+    
+    // Within THACO, prioritize VAN first
+    if (aIsThaco && bIsThaco) {
+      const aIsVan = a.name.toUpperCase().includes('VAN');
+      const bIsVan = b.name.toUpperCase().includes('VAN');
+      
+      if (aIsVan && !bIsVan) return -1;
+      if (!aIsVan && bIsVan) return 1;
+    }
+    
+    // Then sort by name
+    return a.name.localeCompare(b.name);
+  }) : [];
 ---
 
 <Layout 
-  title="Danh sách xe tải - TruckSales | Hàng trăm xe tải chất lượng cao"
-  description="Xem danh sách xe tải cũ và mới với đầy đủ thông tin chi tiết. Tìm kiếm và lọc xe tải theo thương hiệu, năm sản xuất, giá cả. Bảo hành đầy đủ, giao xe tận nơi."
+  title="Danh sách xe tải | TruckSales"
+  description="Khám phá bộ sưu tập xe tải đa dạng với nhiều thương hiệu và mẫu mã khác nhau. Từ xe tải nhẹ đến xe tải nặng, đáp ứng mọi nhu cầu vận chuyển."
 >
   <Header />
   <main>
-    <!-- Page Header -->
-    <section class="bg-primary-600 text-white py-16">
+    <!-- Breadcrumb -->
+    <section class="bg-gray-50 py-4">
       <div class="container mx-auto px-4">
-        <div class="text-center">
-          <h1 class="text-4xl md:text-5xl font-bold mb-4">
-            Danh sách xe tải
-          </h1>
-          <p class="text-xl text-gray-100 max-w-2xl mx-auto">
-            Khám phá hàng trăm xe tải chất lượng cao với đầy đủ thông tin chi tiết
-          </p>
+        <nav class="text-sm">
+          <ol class="flex items-center space-x-2">
+            <li><a href="/" class="text-primary-600 hover:text-primary-700">Trang chủ</a></li>
+            <li class="text-gray-400">/</li>
+            <li class="text-gray-600">Xe tải</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-r from-primary-600 to-primary-700 text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">
+          Danh sách xe tải
+        </h1>
+        <p class="text-xl mb-8 text-gray-100 max-w-3xl mx-auto">
+          Khám phá bộ sưu tập xe tải đa dạng với nhiều thương hiệu và mẫu mã khác nhau. 
+          Từ xe tải nhẹ đến xe tải nặng, đáp ứng mọi nhu cầu vận chuyển.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="tel:0936777735" 
+            class="bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+          >
+            📞 Hotline: 0936777735
+          </a>
+          <a 
+            href="/contact" 
+            class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors"
+          >
+            💬 Tư vấn trực tuyến
+          </a>
         </div>
       </div>
     </section>
-    
-        <!-- Brand Tabs -->
-        <section class="py-8 bg-white border-b">
-          <div class="container mx-auto px-4">
-            <div class="flex flex-wrap justify-center gap-4">
-              <button 
-                class="brand-tab active px-6 py-3 rounded-lg font-semibold transition-all duration-300 bg-primary-600 text-white shadow-lg"
-                data-brand="all"
-              >
-                Tất cả ({allTrucks.length})
-              </button>
-              {brands.map(brand => (
-                <button 
-                  class="brand-tab px-6 py-3 rounded-lg font-semibold transition-all duration-300 bg-gray-100 text-gray-700 hover:bg-primary-100 hover:text-primary-700"
-                  data-brand={brand.name}
-                >
-                  <div class="flex items-center space-x-2">
-                    <img 
-                      src={brand.image} 
-                      alt={brand.name}
-                      class="w-20 h-20 object-contain"
-                    />
-                    {/* <span>{brand.name}</span> */}
-                    {/* <span class="bg-gray-200 text-gray-600 px-2 py-1 rounded-full text-xs">
-                      {brand.slideProduct?.length || 0}
-                    </span> */}
+
+    <!-- Brand Selection -->
+    <section class="py-8 bg-white border-b">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap justify-center items-center gap-8">
+          {trucksData.brands.map((brand, index) => (
+            <div class="flex flex-col items-center cursor-pointer group" data-brand={brand.name}>
+              <div class="w-20 h-20 mb-2 flex items-center justify-center">
+                <img 
+                  src={brand.image} 
+                  alt={brand.name}
+                  class="w-full h-full object-contain group-hover:scale-110 transition-transform"
+                />
+              </div>
+
+              {index === 0 && (
+                <div class="w-full h-1 bg-primary-600 mt-2 rounded"></div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content with Sidebar -->
+    <section class="py-8">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row gap-8">
+          <!-- Sidebar Filters -->
+          <div class="lg:w-1/4">
+            <div class="bg-white rounded-lg shadow-lg p-6 sticky top-4">
+              <h3 class="text-lg font-semibold text-gray-900 mb-6">Bộ lọc</h3>
+              
+              <!-- Category Filters -->
+              <div class="mb-6">
+                <h4 class="text-sm font-medium text-gray-700 mb-3">Danh mục xe</h4>
+                <div class="space-y-2">
+                  {trucksData.listCategories.map((category) => (
+                    <label class="flex items-center">
+                      <input 
+                        type="checkbox" 
+                        class="category-filter rounded border-gray-300 text-primary-600 focus:ring-primary-500" 
+                        data-category={category.name}
+                      >
+                      <span class="ml-2 text-sm text-gray-700">{category.name}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Content -->
+          <div id="trucks-section" class="lg:w-3/4">
+            <!-- Results Summary -->
+            <div class="mb-6">
+              <p class="text-sm text-gray-600">
+                Hiển thị <span class="font-semibold text-primary-600">{trucks.length}</span> xe tải
+              </p>
+            </div>
+
+            <!-- Trucks by Brand -->
+            <div id="trucks-content">
+              {trucksByCategory.map((category) => (
+                <div class="mb-12 truck-category" data-brand={category.brand}>
+                  <h2 class="text-2xl font-bold text-gray-900 mb-6">
+                    {category.name}
+                    {category.brand && category.brand !== 'Unknown' && (
+                      <span class="text-sm font-normal text-gray-600 ml-2">({category.brand})</span>
+                    )}
+                  </h2>
+                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    {category.trucks.map((truck) => (
+                      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="relative">
+                          <img 
+                            src={truck.image} 
+                            alt={truck.name}
+                            class="w-full h-48 object-cover"
+                            loading="lazy"
+                          />
+                          <div class="absolute top-4 left-4 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            {truck.brand || (category.name ? category.name.split(' ')[0] : 'Unknown')}
+                          </div>
+                        </div>
+                        
+                        <div class="p-6">
+                          <h3 class="text-lg font-semibold text-gray-900 mb-3">
+                            {truck.name}
+                          </h3>
+                          
+                          <div class="space-y-2 mb-4">
+                            <div class="flex justify-between text-sm text-gray-600">
+                              <span>Tải trọng:</span>
+                              <span class="font-medium">{getSpecValue(truck.basic_specification, 'Tải trọng')}</span>
+                            </div>
+                            <div class="flex justify-between text-sm text-gray-600">
+                              <span>Chiều dài thùng:</span>
+                              <span class="font-medium">{getSpecValue(truck.basic_specification, 'Chiều dài thùng')}</span>
+                            </div>
+                            <div class="flex justify-between text-sm text-gray-600">
+                              <span>Dịch vụ 24/7:</span>
+                              <span class="font-medium">{getSpecValue(truck.basic_specification, 'Dịch vụ 24/7')}</span>
+                            </div>
+                          </div>
+                          
+                          <div class="flex items-center justify-center">
+                            <a 
+                              href={`/trucks/${truck.id}`}
+                              class="w-full bg-primary-600 text-white px-4 py-3 rounded-lg hover:bg-primary-700 transition-colors text-sm font-medium text-center"
+                            >
+                              Xem chi tiết
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                </button>
+                </div>
               ))}
             </div>
           </div>
-        </section>
+        </div>
+      </div>
+    </section>
 
-        <!-- Filters and Results -->
-        <section class="py-12">
-          <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
-              <!-- Filters Sidebar -->
-              <div class="lg:col-span-1">
-                <TruckFilters />
-              </div>
-              
-              <!-- Results -->
-              <div class="lg:col-span-3">
-                <div class="flex items-center justify-between mb-6">
-                  <h2 class="text-2xl font-bold text-gray-900" id="results-title">
-                    Tất cả xe tải ({allTrucks.length} xe)
-                  </h2>
-                </div>
-            
-                <!-- All trucks view (default) -->
-                <div id="trucks-all" class="trucks-section">
-                  {brands.map(brand => {
-                    const brandTrucks = brand.slideProduct || [];
-                    
-                    // Group trucks by series/type
-                    const groupedTrucks = brandTrucks.reduce((groups, truck) => {
-                      let series = 'Khác';
-                      
-                      if (brand.name === 'THACO TRUCK') {
-                        if (truck.name.includes('TF')) series = 'TF';
-                        else if (truck.name.includes('LINKER T2')) series = 'TẢI TRUNG THACO LINKER';
-                        else if (truck.name.includes('LINKER T3')) series = 'TẢI BEN THACO LINKER';
-                        else if (truck.name.includes('TOWNER VAN')) series = 'THACO TOWNER VAN';
-                        else if (truck.name.includes('TOWNER TẢI')) series = 'THACO TOWNER TẢI';
-                      } else if (brand.name === 'KIA') {
-                        if (truck.name.includes('FRONTIER')) series = 'KIA FRONTIER';
-                        else if (truck.name.includes('đông lạnh')) series = 'XE CHUYÊN DỤNG';
-                      } else if (brand.name === 'MITSUBISHI FUSO') {
-                        if (truck.name.includes('Canter')) series = 'FUSO CANTER';
-                        else if (truck.name.includes('FI')) series = 'FUSO FI';
-                        else if (truck.name.includes('FA')) series = 'FUSO FA';
-                        else if (truck.name.includes('đông lạnh') || truck.name.includes('cánh dơi')) series = 'XE CHUYÊN DỤNG';
-                      } else if (brand.name === 'SINOTRUK') {
-                        if (truck.name.includes('HOWO')) series = 'HOWO';
-                        else if (truck.name.includes('6x4') || truck.name.includes('4x2')) series = 'SINOTRUK';
-                      } else if (brand.name === 'XE CHUYÊN DỤNG') {
-                        series = 'XE CHUYÊN DỤNG';
-                      } else if (brand.name === 'SƠ MI RƠ MOOC') {
-                        series = 'SƠ MI RƠ MOOC';
-                      }
-                      
-                      if (!groups[series]) {
-                        groups[series] = [];
-                      }
-                      groups[series].push(truck);
-                      return groups;
-                    }, {});
-                    
-                    return (
-                      <div class="mb-16" data-brand-section={brand.name}>
-                        <!-- Brand Header -->
-                        <div class="flex items-center mb-8">
-                          <img 
-                            src={brand.image} 
-                            alt={brand.name}
-                            class="w-16 h-16 object-contain mr-4"
-                          />
-                          <div>
-                            <h3 class="text-3xl font-bold text-gray-900">
-                              {brand.name}
-                            </h3>
-                            <p class="text-gray-600">
-                              {brandTrucks.length} dòng xe đa dạng
-                            </p>
-                          </div>
-                        </div>
-                        
-                        <!-- Brand Description -->
-                        <div class="bg-gray-50 p-6 rounded-lg mb-8">
-                          <p class="text-gray-700 leading-relaxed">
-                            {brand.name} là thương hiệu xe tải uy tín với nhiều dòng sản phẩm đa dạng, 
-                            từ xe tải nhẹ đến xe tải hạng nặng, đáp ứng mọi nhu cầu vận chuyển của khách hàng.
-                          </p>
-                        </div>
-                        
-                        <!-- Grouped Trucks by Series -->
-                        {Object.entries(groupedTrucks).map(([series, trucks]) => (
-                          <div class="mb-12">
-                            <h4 class="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-primary-600 pl-4">
-                              {series} ({trucks.length} xe)
-                            </h4>
-                            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6" data-brand={brand.name} data-series={series}>
-                              {trucks.map(truck => (
-                                <div data-truck={JSON.stringify(truck)}>
-                                  <TruckCard truck={truck} />
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    );
-                  })}
-                </div>
-
-                <!-- Individual brand sections (hidden by default) -->
-                {brands.map(brand => {
-                  const brandTrucks = brand.slideProduct || [];
-                  
-                  // Group trucks by series/type
-                  const groupedTrucks = brandTrucks.reduce((groups, truck) => {
-                    let series = 'Khác';
-                    
-                    if (brand.name === 'THACO TRUCK') {
-                      if (truck.name.includes('TF')) series = 'TF';
-                      else if (truck.name.includes('LINKER T2')) series = 'TẢI TRUNG THACO LINKER';
-                      else if (truck.name.includes('LINKER T3')) series = 'TẢI BEN THACO LINKER';
-                      else if (truck.name.includes('TOWNER VAN')) series = 'THACO TOWNER VAN';
-                      else if (truck.name.includes('TOWNER TẢI')) series = 'THACO TOWNER TẢI';
-                    } else if (brand.name === 'KIA') {
-                      if (truck.name.includes('FRONTIER')) series = 'KIA FRONTIER';
-                      else if (truck.name.includes('đông lạnh')) series = 'XE CHUYÊN DỤNG';
-                    } else if (brand.name === 'MITSUBISHI FUSO') {
-                      if (truck.name.includes('Canter')) series = 'FUSO CANTER';
-                      else if (truck.name.includes('FI')) series = 'FUSO FI';
-                      else if (truck.name.includes('FA')) series = 'FUSO FA';
-                      else if (truck.name.includes('đông lạnh') || truck.name.includes('cánh dơi')) series = 'XE CHUYÊN DỤNG';
-                    } else if (brand.name === 'SINOTRUK') {
-                      if (truck.name.includes('HOWO')) series = 'HOWO';
-                      else if (truck.name.includes('6x4') || truck.name.includes('4x2')) series = 'SINOTRUK';
-                    } else if (brand.name === 'XE CHUYÊN DỤNG') {
-                      series = 'XE CHUYÊN DỤNG';
-                    } else if (brand.name === 'SƠ MI RƠ MOOC') {
-                      series = 'SƠ MI RƠ MOOC';
-                    }
-                    
-                    if (!groups[series]) {
-                      groups[series] = [];
-                    }
-                    groups[series].push(truck);
-                    return groups;
-                  }, {});
-                  
-                  return (
-                    <div id={`trucks-${brand.name.toLowerCase().replace(/\s+/g, '-')}`} class="trucks-section hidden">
-                      <!-- Brand Header -->
-                      <div class="flex items-center mb-8">
-                        <img 
-                          src={brand.image} 
-                          alt={brand.name}
-                          class="w-16 h-16 object-contain mr-4"
-                        />
-                        <div>
-                          <h3 class="text-3xl font-bold text-gray-900">
-                            {brand.name}
-                          </h3>
-                          <p class="text-gray-600">
-                            {brandTrucks.length} dòng xe đa dạng
-                          </p>
-                        </div>
-                      </div>
-                      
-                      <!-- Brand Description -->
-                      <div class="bg-gray-50 p-6 rounded-lg mb-8">
-                        <p class="text-gray-700 leading-relaxed">
-                          {brand.name} là thương hiệu xe tải uy tín với nhiều dòng sản phẩm đa dạng, 
-                          từ xe tải nhẹ đến xe tải hạng nặng, đáp ứng mọi nhu cầu vận chuyển của khách hàng.
-                        </p>
-                      </div>
-                      
-                      <!-- Grouped Trucks by Series -->
-                      {Object.entries(groupedTrucks).map(([series, trucks]) => (
-                        <div class="mb-12">
-                          <h4 class="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-primary-600 pl-4">
-                            {series} ({trucks.length} xe)
-                          </h4>
-                          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6" data-brand={brand.name} data-series={series}>
-                            {trucks.map(truck => (
-                              <div data-truck={JSON.stringify(truck)}>
-                                <TruckCard truck={truck} />
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  );
-                })}
-            
-            <!-- No Results Message -->
-            <div id="no-results" class="hidden text-center py-12">
-              <div class="text-6xl mb-4">🚚</div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">
-                Không tìm thấy xe tải phù hợp
-              </h3>
-              <p class="text-gray-600 mb-4">
-                Hãy thử điều chỉnh bộ lọc hoặc liên hệ với chúng tôi để được tư vấn
-              </p>
-              <a 
-                href="/contact" 
-                class="bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition-colors font-medium"
-              >
-                Liên hệ tư vấn
-              </a>
-            </div>
-          </div>
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary-600 text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Không tìm thấy xe phù hợp?
+        </h2>
+        <p class="text-xl mb-8 text-gray-100">
+          Đội ngũ tư vấn chuyên nghiệp của chúng tôi sẽ giúp bạn tìm xe tải phù hợp nhất
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="tel:0936777735" 
+            class="bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+          >
+            📞 Gọi ngay: 0936777735
+          </a>
+          <a 
+            href="/contact" 
+            class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors"
+          >
+            💬 Tư vấn trực tuyến
+          </a>
         </div>
       </div>
     </section>
@@ -272,124 +243,161 @@ const allTrucks = getAllTrucks();
   <Footer />
 </Layout>
 
-    <script>
-      // Brand tab functionality
-      document.addEventListener('DOMContentLoaded', function() {
-        const brandTabs = document.querySelectorAll('.brand-tab');
-        const trucksSections = document.querySelectorAll('.trucks-section');
-        const resultsTitle = document.getElementById('results-title');
-        const noResults = document.getElementById('no-results');
+<script>
+  // Brand switching and category filtering functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const brandElements = document.querySelectorAll('[data-brand]');
+    const truckCategories = document.querySelectorAll('.truck-category');
+    const resultsCount = document.querySelector('.text-sm.text-gray-600 span');
+    const categoryFilters = document.querySelectorAll('.category-filter');
+    
+    // Brand mapping - Phân loại chính xác theo hãng
+    const brandMapping = {
+      'THACO TRUCK': ['THACO', 'TOWNER', 'OLLIN'],
+      'KIA': ['KIA', 'FRONTIER', 'BONGO', 'FORLAND'],
+      'MITSUBISHI FUSO': ['FUSO', 'CANTER', 'FIGHTER'],
+      'SINOTRUK': ['SINOTRUK', 'HOWO', 'AUMAN', 'GOLDEN DRAGON'],
+      'SƠ MI RƠ MOOC': ['SƠ MI RƠ MOÓC', 'SMRM', 'Sơ Mi', 'Xương', 'Sàn', 'Ben', 'Bồn']
+    };
+    
+    // Category mapping - Phân loại theo danh mục xe (mở rộng để bao gồm tất cả xe)
+    const categoryMapping = {
+      'Tải nhẹ máy xăng': ['TẢI NHẸ MÁY XĂNG', 'TOWNER', 'THACO'],
+      'Tải nhẹ máy dầu': ['TẢI NHẸ MÁY DẦU', 'FRONTIER', 'KIA'],
+      'Tải van': ['TẢI VAN', 'VAN', 'TOWNER VAN'],
+      'Tải trung': ['TẢI TRUNG', 'CANTER', 'OLLIN', 'FUSO'],
+      'Ben': ['BEN', 'FORLAND', 'XE BEN'],
+      'Đầu kéo': ['ĐẦU KÉO', 'AUMAN', 'HOWO', 'SINOTRUK'],
+      'Sơ Mi Rơ Mooc': ['SƠ MI RƠ MOÓC', 'SMRM', 'Xương', 'Sàn', 'Sơ Mi']
+    };
+    
+    let currentBrand = 'all'; // Default to show all brands
+    let selectedCategories = new Set(); // Default to empty (show all categories)
+    
+    // Initialize with all trucks shown (no brand selected)
+    function showAllTrucks() {
+      truckCategories.forEach(category => {
+        category.style.display = 'block';
+      });
+      
+      // Update results count to show total
+      if (resultsCount) {
+        const totalTrucks = document.querySelectorAll('.truck-category .bg-white.rounded-lg').length;
+        resultsCount.textContent = totalTrucks;
+      }
+    }
+    
+    function filterTrucksByBrandAndCategory(selectedBrand, selectedCats) {
+      let visibleCount = 0;
+      
+      truckCategories.forEach(category => {
+        const categoryBrand = category.getAttribute('data-brand');
+        const categoryName = category.querySelector('h2').textContent;
         
-        function switchBrand(selectedBrand) {
-          // Update tab styles
-          brandTabs.forEach(tab => {
-            if (tab.dataset.brand === selectedBrand) {
-              tab.classList.remove('bg-gray-100', 'text-gray-700', 'hover:bg-primary-100', 'hover:text-primary-700');
-              tab.classList.add('bg-primary-600', 'text-white', 'shadow-lg');
-            } else {
-              tab.classList.remove('bg-primary-600', 'text-white', 'shadow-lg');
-              tab.classList.add('bg-gray-100', 'text-gray-700', 'hover:bg-primary-100', 'hover:text-primary-700');
+        // Check brand filter
+        let brandMatch = true; // Default to show all
+        if (selectedBrand && selectedBrand !== 'all') {
+          const brandKeywords = brandMapping[selectedBrand] || [selectedBrand];
+          brandMatch = brandKeywords.some(keyword => 
+            categoryBrand.includes(keyword) || 
+            categoryName.includes(keyword)
+          );
+        }
+        
+        // Check category filter
+        let categoryMatch = true; // Default to show all
+        if (selectedCats.size > 0) {
+          categoryMatch = false;
+          for (let selectedCat of selectedCats) {
+            const catKeywords = categoryMapping[selectedCat] || [selectedCat];
+            if (catKeywords.some(keyword => 
+              categoryName.toUpperCase().includes(keyword.toUpperCase()) ||
+              categoryName.includes(keyword)
+            )) {
+              categoryMatch = true;
+              break;
             }
-          });
-          
-          // Hide all sections first
-          trucksSections.forEach(section => {
-            section.classList.add('hidden');
-          });
-          
-          // Show specific section based on selected brand and scroll to it
-          let targetSection;
-          switch(selectedBrand) {
-            case 'all':
-              targetSection = document.getElementById('trucks-all');
-              targetSection.classList.remove('hidden');
-              if (resultsTitle) {
-                resultsTitle.textContent = 'Tất cả xe tải (${allTrucks.length} xe)';
-              }
-              break;
-              
-            case 'THACO TRUCK':
-              targetSection = document.getElementById('trucks-thaco-truck');
-              targetSection.classList.remove('hidden');
-              if (resultsTitle) {
-                resultsTitle.textContent = 'THACO TRUCK xe tải';
-              }
-              break;
-              
-            case 'KIA':
-              targetSection = document.getElementById('trucks-kia');
-              targetSection.classList.remove('hidden');
-              if (resultsTitle) {
-                resultsTitle.textContent = 'KIA xe tải';
-              }
-              break;
-              
-            case 'MITSUBISHI FUSO':
-              targetSection = document.getElementById('trucks-mitsubishi-fuso');
-              targetSection.classList.remove('hidden');
-              if (resultsTitle) {
-                resultsTitle.textContent = 'MITSUBISHI FUSO xe tải';
-              }
-              break;
-              
-            case 'SINOTRUK':
-              targetSection = document.getElementById('trucks-sinotruk');
-              targetSection.classList.remove('hidden');
-              if (resultsTitle) {
-                resultsTitle.textContent = 'SINOTRUK xe tải';
-              }
-              break;
-              
-            case 'XE CHUYÊN DỤNG':
-              targetSection = document.getElementById('trucks-xe-chuyên-dụng');
-              targetSection.classList.remove('hidden');
-              if (resultsTitle) {
-                resultsTitle.textContent = 'XE CHUYÊN DỤNG xe tải';
-              }
-              break;
-              
-            case 'SƠ MI RƠ MOOC':
-              targetSection = document.getElementById('trucks-sơ-mi-rơ-mooc');
-              targetSection.classList.remove('hidden');
-              if (resultsTitle) {
-                resultsTitle.textContent = 'SƠ MI RƠ MOOC xe tải';
-              }
-              break;
-              
-            default:
-              targetSection = document.getElementById('trucks-all');
-              targetSection.classList.remove('hidden');
-              if (resultsTitle) {
-                resultsTitle.textContent = 'Tất cả xe tải (${allTrucks.length} xe)';
-              }
-          }
-          
-          // Smooth scroll to the target section
-          if (targetSection) {
-            setTimeout(() => {
-              targetSection.scrollIntoView({ 
-                behavior: 'smooth', 
-                block: 'start',
-                inline: 'nearest'
-              });
-            }, 100);
-          }
-          
-          // Hide no results message
-          if (noResults) {
-            noResults.classList.add('hidden');
           }
         }
         
-        // Add click event listeners to tabs
-        brandTabs.forEach(tab => {
-          tab.addEventListener('click', function() {
-            const selectedBrand = this.dataset.brand;
-            switchBrand(selectedBrand);
-          });
+        const shouldShow = brandMatch && categoryMatch;
+        
+        if (shouldShow) {
+          category.style.display = 'block';
+          const truckCards = category.querySelectorAll('.bg-white.rounded-lg');
+          visibleCount += truckCards.length;
+        } else {
+          category.style.display = 'none';
+        }
+      });
+      
+      // Update results count
+      if (resultsCount) {
+        resultsCount.textContent = visibleCount;
+      }
+    }
+    
+    // Add click handlers to brand elements
+    brandElements.forEach(element => {
+      element.addEventListener('click', function() {
+        currentBrand = this.getAttribute('data-brand');
+        
+        // Update active state
+        brandElements.forEach(el => {
+          el.classList.remove('active');
+          const indicator = el.querySelector('.w-full.h-1');
+          if (indicator) indicator.remove();
         });
         
-        // Initialize with "all" selected
-        switchBrand('all');
+        this.classList.add('active');
+        
+        // Add active indicator
+        const indicator = document.createElement('div');
+        indicator.className = 'w-full h-1 bg-primary-600 mt-2 rounded';
+        this.appendChild(indicator);
+        
+        // Filter trucks
+        filterTrucksByBrandAndCategory(currentBrand, selectedCategories);
+        
+        // Scroll to trucks section
+        const trucksSection = document.getElementById('trucks-section');
+        if (trucksSection) {
+          trucksSection.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'start' 
+          });
+        }
       });
-    </script>
+    });
+    
+    // Add change handlers to category filters
+    categoryFilters.forEach(filter => {
+      filter.addEventListener('change', function() {
+        const category = this.getAttribute('data-category');
+        
+        if (this.checked) {
+          selectedCategories.add(category);
+        } else {
+          selectedCategories.delete(category);
+        }
+        
+        // Filter trucks
+        filterTrucksByBrandAndCategory(currentBrand, selectedCategories);
+      });
+    });
+    
+    
+    // Initialize with all trucks shown (no brand selected)
+    showAllTrucks();
+  });
+</script>
+
+<style>
+  [data-brand].active {
+    color: #2563eb;
+  }
+  
+  [data-brand].active span {
+    color: #2563eb;
+  }
+</style>

@@ -1,19 +1,5 @@
-// Truck data from API
-import { readFileSync } from 'fs';
-import { fileURLToPath } from 'url';
-import { dirname, join } from 'path';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-let apiData: any;
-try {
-  const apiPath = join(__dirname, '../../api.json');
-  apiData = JSON.parse(readFileSync(apiPath, 'utf-8'));
-} catch (error) {
-  console.error('Error loading API data:', error);
-  apiData = { result: { components: [] } };
-}
+﻿// Truck Data Management
+import { mergeAllBrandData, loadBrandSpecificData, MergedTruckData } from '../utils/dataLoader';
 
 export interface TruckSpec {
   title: string;
@@ -24,13 +10,19 @@ export interface Truck {
   id: number;
   name: string;
   slug: string;
-  promotion: string | null;
-  promotion_link: string | null;
-  basic_specification: TruckSpec[];
-  image: string;
-  weight: number;
-  price: number | null;
   brand: string;
+  vehicleType: string;
+  filterCategories: string[];
+  weight: number;
+  image: string;
+  basic_specification: TruckSpec[];
+}
+
+export interface VehicleType {
+  id: number;
+  name: string;
+  slug: string;
+  description: string;
 }
 
 export interface Brand {
@@ -38,77 +30,124 @@ export interface Brand {
   name: string;
   slug: string;
   image: string;
-  link: string | null;
-  slideProduct: Truck[];
+  active: boolean;
 }
 
-// Extract brands and trucks from API data
-const productSliders = apiData.result.components.filter(component => component.name === 'Danh sách sản phẩm');
-const brands: Brand[] = productSliders.flatMap(component => component.data.brands || []);
+export interface Category {
+  id: number;
+  categoryCarname: string;
+  carsCount: number;
+  car: Truck[];
+}
 
-// Flatten all trucks from all brands
-const allTrucks: Truck[] = brands.flatMap(brand => 
-  brand.slideProduct.map(truck => ({
-    ...truck,
-    brand: brand.name
-  }))
-);
+export interface TruckData {
+  brands: Brand[];
+  load: string[];
+  price: string[];
+  listCategories: string[];
+  cars: Category[];
+}
 
-// Get unique brands
-export const uniqueBrands = [...new Set(brands.map(brand => brand.name))];
-
-// Get trucks by brand
-export const getTrucksByBrand = (brandName: string): Truck[] => {
-  return allTrucks.filter(truck => truck.brand === brandName);
+// Initial data
+let trucksData: TruckData = {
+  brands: [],
+  load: [],
+  price: [],
+  listCategories: [],
+  cars: []
 };
+
+// Load data from data folder
+export function loadTrucksData(): TruckData {
+  try {
+    const mergedData = mergeAllBrandData();
+    
+    trucksData = {
+      brands: mergedData.brands,
+      load: mergedData.load,
+      price: mergedData.price,
+      listCategories: mergedData.listCategories,
+      cars: mergedData.cars
+    };
+    
+    return trucksData;
+  } catch (error) {
+    console.error('Error loading trucks data:', error);
+    return trucksData;
+  }
+}
+
+// Load data for specific brand
+export function loadBrandData(brandName: string): TruckData {
+  try {
+    const brandData = loadBrandSpecificData(brandName);
+    if (!brandData) {
+      return trucksData;
+    }
+    
+    return {
+      brands: brandData.brands,
+      load: brandData.load,
+      price: brandData.price,
+      listCategories: brandData.listCategories,
+      cars: brandData.cars
+    };
+  } catch (error) {
+    console.error(`Error loading brand data for ${brandName}:`, error);
+    return trucksData;
+  }
+}
 
 // Get all trucks
-export const getAllTrucks = (): Truck[] => {
+export function getAllTrucks(): Truck[] {
+  const allTrucks: Truck[] = [];
+  if (trucksData.cars && Array.isArray(trucksData.cars)) {
+    trucksData.cars.forEach(category => {
+      if (category.car && Array.isArray(category.car)) {
+        category.car.forEach(truck => {
+          allTrucks.push(truck);
+        });
+      }
+    });
+  }
   return allTrucks;
-};
+}
 
 // Get featured trucks (first 4 trucks)
-export const getFeaturedTrucks = (): Truck[] => {
-  return allTrucks.slice(0, 4);
-};
+export function getFeaturedTrucks(): Truck[] {
+  return getAllTrucks().slice(0, 4);
+}
 
 // Get truck by ID
-export const getTruckById = (id: number): Truck | undefined => {
-  return allTrucks.find(truck => truck.id === id);
-};
-
-// Get trucks by weight range
-export const getTrucksByWeightRange = (minWeight: number, maxWeight: number): Truck[] => {
-  return allTrucks.filter(truck => truck.weight >= minWeight && truck.weight <= maxWeight);
-};
-
-// Get trucks by price range
-export const getTrucksByPriceRange = (minPrice: number, maxPrice: number): Truck[] => {
-  return allTrucks.filter(truck => 
-    truck.price && truck.price >= minPrice && truck.price <= maxPrice
-  );
-};
-
-// Search trucks by name
-export const searchTrucks = (query: string): Truck[] => {
-  const lowercaseQuery = query.toLowerCase();
-  return allTrucks.filter(truck => 
-    truck.name.toLowerCase().includes(lowercaseQuery) ||
-    truck.brand.toLowerCase().includes(lowercaseQuery)
-  );
-};
-
-// Format price for display (removed - no longer needed)
-// export const formatPrice = (price: number | null): string => {
-//   if (!price) return 'Liên hệ';
-//   return new Intl.NumberFormat('vi-VN').format(price) + 'đ';
-// };
+export function getTruckById(id: number): Truck | undefined {
+  return getAllTrucks().find(truck => truck.id === id);
+}
 
 // Get specification value by title
-export const getSpecValue = (specs: TruckSpec[] | undefined, title: string): string => {
-  if (!specs || !Array.isArray(specs)) return 'N/A';
+export function getSpecValue(specs: TruckSpec[] | undefined, title: string): string {
+  if (!specs || !Array.isArray(specs)) {
+    return 'N/A';
+  }
   const spec = specs.find(s => s.title === title);
   return spec ? spec.value : 'N/A';
-};
+}
 
-export { brands, allTrucks };
+// Get trucks by brand
+export function getTrucksByBrand(brand: string): Truck[] {
+  return getAllTrucks().filter(truck => truck.brand === brand);
+}
+
+// Search trucks
+export function searchTrucks(query: string): Truck[] {
+  const lowercaseQuery = query.toLowerCase();
+  return getAllTrucks().filter(truck => 
+    truck.name.toLowerCase().includes(lowercaseQuery) ||
+    truck.brand.toLowerCase().includes(lowercaseQuery) ||
+    truck.vehicleType.toLowerCase().includes(lowercaseQuery)
+  );
+}
+
+// Get current data
+export function getCurrentData(): TruckData {
+  return trucksData;
+}

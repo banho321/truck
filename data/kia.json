@@ -1,0 +1,622 @@
+{
+  "message": "",
+  "result": {
+    "title": "KIA",
+    "description": null,
+    "meta": {
+      "image": "https://thacotruck.com.vn/backend/storage/logo/logo-kia-2-3.png"
+    },
+    "icon": "https://thacotai.vn/storage/logo/logo-2024/apdung-logo-truyenthong-web-favicon.jpg",
+    "image": "https://thacotruck.com.vn/backend/storage/logo/logo-kia-2-3.png",
+    "components": [
+      {
+        "name": "breadcrumb",
+        "component": "breadcrumb",
+        "data": {
+          "listBreadcrumb": [
+            { "name": "Trang ch\u1ee7", "url": "/" },
+            { "name": "S\u1ea3n ph\u1ea9m", "url": "/san-pham" },
+            { "name": "KIA", "url": "kia" }
+          ]
+        }
+      },
+      {
+        "name": "Product",
+        "component": "product",
+        "data": {
+          "brands": [
+            {
+              "id": 6,
+              "name": "THACO TRUCK",
+              "slug": "thaco-truck",
+              "description": null,
+              "parent_id": 0,
+              "link": null,
+              "active": false,
+              "image": "https://thacotai.vn/storage/logo/apdung-logo-truyenthong-web-truck-phancap.jpg"
+            },
+            {
+              "id": 8,
+              "name": "KIA",
+              "slug": "kia",
+              "description": null,
+              "parent_id": 0,
+              "link": null,
+              "active": true,
+              "image": "https://thacotruck.com.vn/backend/storage/logo/logo-kia-2-3.png"
+            },
+            {
+              "id": 2,
+              "name": "MITSUBISHI FUSO",
+              "slug": "fuso",
+              "description": null,
+              "parent_id": 0,
+              "link": null,
+              "active": false,
+              "image": "https://thacotai.vn/storage/logo/logo-san-pham/untitled-1-03-2.png"
+            },
+            {
+              "id": 9,
+              "name": "SINOTRUK",
+              "slug": "sinotruk",
+              "description": null,
+              "parent_id": 0,
+              "link": null,
+              "active": false,
+              "image": "https://thacotruck.com.vn/backend/storage/logo/logo-sinotruck2-1.png"
+            },
+            {
+              "id": 11,
+              "name": "S\u01a0 MI R\u01a0 MOOC",
+              "slug": "somi-romooc",
+              "description": null,
+              "parent_id": 0,
+              "link": null,
+              "active": false,
+              "image": "https://thacotai.vn/storage/logo/1692774050587.jpg"
+            }
+          ],
+          "load": [
+            {
+              "id": 1,
+              "name": "D\u01b0\u1edbi 1 t\u1ea5n",
+              "from_load": 0,
+              "to_load": 1
+            },
+            {
+              "id": 2,
+              "name": "1 t\u1ea5n \u2264 2.5 t\u1ea5n",
+              "from_load": 1,
+              "to_load": 2.5
+            },
+            {
+              "id": 3,
+              "name": "2.5 t\u1ea5n \u2264 5 t\u1ea5n",
+              "from_load": 2.5,
+              "to_load": 5
+            },
+            {
+              "id": 4,
+              "name": "5 t\u1ea5n \u2264 8 t\u1ea5n",
+              "from_load": 5,
+              "to_load": 8
+            },
+            {
+              "id": 5,
+              "name": "Tr\u00ean 8 t\u1ea5n",
+              "from_load": 8,
+              "to_load": 100
+            }
+          ],
+          "price": [
+            {
+              "id": 1,
+              "name": "D\u01b0\u1edbi 300 tri\u1ec7u",
+              "from_price": 0,
+              "to_price": 300000000
+            },
+            {
+              "id": 2,
+              "name": "300 tri\u1ec7u \u2264 500 tri\u1ec7u",
+              "from_price": 300000000,
+              "to_price": 500000000
+            },
+            {
+              "id": 3,
+              "name": "500 tri\u1ec7u \u2264 700 tri\u1ec7u",
+              "from_price": 500000000,
+              "to_price": 700000000
+            },
+            {
+              "id": 4,
+              "name": "700 tri\u1ec7u \u2264 900 tri\u1ec7u",
+              "from_price": 700000000,
+              "to_price": 900000000
+            },
+            {
+              "id": 5,
+              "name": "Tr\u00ean 900 tri\u1ec7u",
+              "from_price": 900000000,
+              "to_price": 10000000000
+            }
+          ],
+          "listCategories": [
+            {
+              "id": 10,
+              "name": "T\u1ea3i nh\u1eb9 m\u00e1y x\u0103ng",
+              "slug": null,
+              "categories": null
+            },
+            {
+              "id": 11,
+              "name": "T\u1ea3i nh\u1eb9 m\u00e1y d\u1ea7u",
+              "slug": null,
+              "categories": null
+            },
+            {
+              "id": 12,
+              "name": "T\u1ea3i van",
+              "slug": null,
+              "categories": null
+            },
+            {
+              "id": 13,
+              "name": "T\u1ea3i trung",
+              "slug": null,
+              "categories": null
+            },
+            { "id": 15, "name": "Ben trung", "slug": null, "categories": null },
+            {
+              "id": 16,
+              "name": "Ben n\u1eb7ng",
+              "slug": null,
+              "categories": null
+            },
+            {
+              "id": 17,
+              "name": "\u0110\u1ea7u k\u00e9o",
+              "slug": null,
+              "categories": null
+            },
+            {
+              "id": 18,
+              "name": "Xe chuy\u00ean d\u1ee5ng",
+              "slug": null,
+              "categories": null
+            },
+            {
+              "id": 19,
+              "name": "S\u01a1 Mi R\u01a1 Mooc",
+              "slug": null,
+              "categories": null
+            }
+          ],
+          "cars": [
+            {
+              "id": 52,
+              "categoryCarname": "KIA FRONTIER",
+              "categoryCarLink": null,
+              "carsCount": 6,
+              "car": [
+                {
+                  "id": 229,
+                  "name": "KIA FRONTIER K200",
+                  "slug": "kia-frontier-k200",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "1.99 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i th\u00f9ng",
+                      "value": "3.2 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "76 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/kia/kia-e5/k200/banner-hdd-tai-web-kia-2024-k200-1.png",
+                  "weight": 1.99,
+                  "price": 400000000
+                },
+                {
+                  "id": 230,
+                  "name": "KIA FRONTIER K200S",
+                  "slug": "kia-frontier-k200s",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "1.49 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i th\u00f9ng",
+                      "value": "2.85 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "76 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/kia/kia-e5/k200s/banner-hdd-tai-web-kia-2024-k200s.png",
+                  "weight": 1.49,
+                  "price": 359000000
+                },
+                {
+                  "id": 228,
+                  "name": "KIA FRONTIER K200S-4WD",
+                  "slug": "kia-frontier-k200s-4wd-1",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "1.49 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i th\u00f9ng",
+                      "value": "2.85 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "76 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/kia/kia-e5/k200s-4wd/banner-hdd-tai-web-kia-2024-k200s-4wd.png",
+                  "weight": 1.49,
+                  "price": 429000000
+                },
+                {
+                  "id": 231,
+                  "name": "KIA FRONTIER K200SD-4WD",
+                  "slug": "kia-frontier-k200sd-4wd-1",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "1.49 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i th\u00f9ng",
+                      "value": "1.750 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "76 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/kia/kia-e5/k200sd-4wd/banner-hdd-tai-web-kia-2024-k200sd.png",
+                  "weight": 1.49,
+                  "price": 429000000
+                },
+                {
+                  "id": 232,
+                  "name": "KIA FRONTIER K250",
+                  "slug": "kia-frontier-k250-1",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "2.49 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i th\u00f9ng",
+                      "value": "3.5 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "76 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/tai/banner/kia-frontier/k250/k250-l-11zon.png",
+                  "weight": 2.49,
+                  "price": 400000000
+                },
+                {
+                  "id": 70,
+                  "name": "KIA FRONTIER K250L",
+                  "slug": "kia-frontier-k250l",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "2.35 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i th\u00f9ng",
+                      "value": "4.5 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "76 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/kia/k250l/hdd-kia-frontier-k250l.png",
+                  "weight": 2.35,
+                  "price": 445000000
+                }
+              ]
+            },
+            {
+              "id": 80,
+              "categoryCarname": "XE CHUY\u00caN D\u1ee4NG",
+              "categoryCarLink": null,
+              "carsCount": 11,
+              "car": [
+                {
+                  "id": 84,
+                  "name": "Xe b\u00e1n h\u00e0ng l\u01b0u \u0111\u1ed9ng - KIA K250",
+                  "slug": "xe-ban-hang-luu-dong-kia-k250",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "2.25 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i th\u00f9ng",
+                      "value": "3.5 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "79 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/xe-chuyen-dung/xe-ban-hang-luu-dong-k250/hdd-xechuyendung-bhld-kia-frontier-k250.png",
+                  "weight": 2.25,
+                  "price": null
+                },
+                {
+                  "id": 90,
+                  "name": "Xe \u0111\u00f4ng l\u1ea1nh Kia Frontier K200",
+                  "slug": "xe-dong-lanh-kia-k200",
+                  "promotion": null,
+                  "promotion_link": "#",
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "1.49 t\u1ea5n"
+                    },
+                    {
+                      "title": "Th\u1ec3 t\u00edch th\u00f9ng",
+                      "value": "8.54 kh\u1ed1i"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "79 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/xe-chuyen-dung/k200-dl/hinhdd-xechuyendung-donglanh-k200.png",
+                  "weight": 1.49,
+                  "price": null
+                },
+                {
+                  "id": 91,
+                  "name": "Xe \u0111\u00f4ng l\u1ea1nh Kia Frontier K250",
+                  "slug": "xe-dong-lanh-kia-frontier-k250",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "1.99 t\u1ea5n"
+                    },
+                    {
+                      "title": "Th\u1ec3 t\u00edch th\u00f9ng",
+                      "value": "8.92 kh\u1ed1i"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "79 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/xe-chuyen-dung/k250dl/hinhdd-xechuyendung-donglanh-k250.png",
+                  "weight": 1.99,
+                  "price": null
+                },
+                {
+                  "id": 92,
+                  "name": "Xe t\u1ea3i ch\u1edf k\u00ednh Kia Frontier K250",
+                  "slug": "xe-banh-hang-luu-dong-1-1-2-1-1-1-1",
+                  "promotion": null,
+                  "promotion_link": "#",
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "2.49 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i th\u00f9ng",
+                      "value": "3.5 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "79 X\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/xe-chuyen-dung/k250-cho-kinh/hinhdd-xechuyendung-chokinh-k250.png",
+                  "weight": 2.49,
+                  "price": null
+                },
+                {
+                  "id": 95,
+                  "name": "Xe cu\u1ed1n \u00e9p r\u00e1c KIA FRONTIER K250B",
+                  "slug": "xe-cho-rac-kia-frontier-k250b",
+                  "promotion": null,
+                  "promotion_link": "#",
+                  "basic_specification": [
+                    { "title": "T\u1ea3i tr\u1ecdng", "value": "1.6 t\u1ea5n" },
+                    {
+                      "title": "Th\u1ec3 t\u00edch th\u00f9ng",
+                      "value": "3.3 kh\u1ed1i"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "79 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/xe-chuyen-dung/k200-ep-rac/hinhdd-xechuyendung-choeprac-k250b.png",
+                  "weight": 1.6,
+                  "price": null
+                },
+                {
+                  "id": 220,
+                  "name": "Xe \u0111\u00f4ng l\u1ea1nh Kia Frontier K250L",
+                  "slug": "xe-dong-lanh-kia-frontier-k250l-dl1",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "1.99 t\u1ea5n"
+                    },
+                    {
+                      "title": "Th\u1ec3 t\u00edch th\u00f9ng",
+                      "value": "11.4 m3"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "79 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/xe-chuyen-dung/xe-dong-lanh-k250l-dl1/hinhdd-xechuyendung-k250l-dl.png",
+                  "weight": 1.99,
+                  "price": null
+                },
+                {
+                  "id": 219,
+                  "name": "Xe ch\u1edf gia c\u1ea7m Kia Frontier K149",
+                  "slug": "xe-cho-gia-cam",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    { "title": "T\u1ea3i tr\u1ecdng", "value": "1.2 t\u1ea5n" },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i th\u00f9ng",
+                      "value": "3.2 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "79 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/xe-chuyen-dung/xe-cho-gia-cam-k149-gc1/hdd-k149-gc1.png",
+                  "weight": 1.2,
+                  "price": null
+                },
+                {
+                  "id": 218,
+                  "name": "Xe \u0111\u00f4ng l\u1ea1nh Kia Frontier K149 -DL1",
+                  "slug": "xe-dong-lanh-kia-frontier-k149-dl1",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "0.99 t\u1ea5n"
+                    },
+                    {
+                      "title": "Th\u1ec3 t\u00edch th\u00f9ng",
+                      "value": "8,53 m3"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "79 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/xe-chuyen-dung/xe-dong-lanh-k149-dl1/hdd-k149-dl1.png",
+                  "weight": 0.99,
+                  "price": null
+                },
+                {
+                  "id": 217,
+                  "name": "Xe \u0111\u00f4ng l\u1ea1nh Kia Frontier K100S -DL1",
+                  "slug": "xe-dong-lanh-kia-frontier-k100s-dl1",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    { "title": "T\u1ea3i tr\u1ecdng", "value": "0,9 t\u1ea5n" },
+                    {
+                      "title": "Th\u1ec3 t\u00edch th\u00f9ng",
+                      "value": "7.3 m3"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "79 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/xe-chuyen-dung/xe-dong-lanh-kia-k100s-dl1/hdd-k100s-dl1.png",
+                  "weight": 0.9,
+                  "price": null
+                },
+                {
+                  "id": 203,
+                  "name": "Xe b\u00e1n h\u00e0ng l\u01b0u \u0111\u1ed9ng - Kia Frontier K200-BH2",
+                  "slug": "xe",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "1.49 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i th\u00f9ng",
+                      "value": "3,355 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "79 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/xe-chuyen-dung/bhld-k200-bh2/hdd-kia-frontier-k200-bh2-1.png",
+                  "weight": 1.49,
+                  "price": null
+                },
+                {
+                  "id": 197,
+                  "name": "Xe b\u00e1n h\u00e0ng l\u01b0u \u0111\u1ed9ng - Kia Frontier K200-BH1",
+                  "slug": "xe-ban-hang-luu-dong-k",
+                  "promotion": null,
+                  "promotion_link": null,
+                  "basic_specification": [
+                    {
+                      "title": "T\u1ea3i tr\u1ecdng",
+                      "value": "1,49 t\u1ea5n"
+                    },
+                    {
+                      "title": "Chi\u1ec1u d\u00e0i th\u00f9ng",
+                      "value": "3, 355 m"
+                    },
+                    {
+                      "title": "D\u1ecbch v\u1ee5 24/7",
+                      "value": "79 x\u01b0\u1edfng"
+                    }
+                  ],
+                  "image": "https://thacotai.vn/storage/hinh-anh-xe/xe-chuyen-dung/xe-bh-kia-k200-bh1/hdd-xechuyendung-bhld-kia-frontier-k200.png",
+                  "weight": 1.49,
+                  "price": null
+                }
+              ]
+            }
+          ],
+          "categoryChildren": 8,
+          "productPage": {
+            "nameproducts": "S\u1ea3n ph\u1ea9m",
+            "slugproducts": "san-pham"
+          },
+          "loadShow": 1,
+          "priceShow": 1
+        }
+      }
+    ]
+  }
+}

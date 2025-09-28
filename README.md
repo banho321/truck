@@ -1,211 +1,169 @@
-# Truck Sales Website
+# 🚛 Truck Sales Website
 
-A modern, SEO-optimized static website for selling trucks built with Astro.
+Website bán xe tải với giao diện hiện đại, được xây dựng bằng Astro và Tailwind CSS.
 
-## 🚀 Features
+## ✨ Tính năng
 
-- **Lightning Fast**: Built with Astro for optimal performance
-- **SEO Optimized**: Comprehensive SEO with structured data, sitemaps, and meta tags
-- **Responsive Design**: Mobile-first design that works on all devices
-- **Performance Optimized**: Lazy loading, image optimization, and service worker caching
-- **Modern UI**: Clean, professional design with Tailwind CSS
-- **Static Generation**: Fast loading and easy deployment
+- 🏠 **Trang chủ** - Hiển thị xe tải nổi bật
+- 🚛 **Danh sách xe tải** - Lọc theo hãng và danh mục
+- 📄 **Chi tiết xe tải** - Thông tin đầy đủ từng xe
+- 📞 **Liên hệ** - Thông tin liên lạc
+- ℹ️ **Giới thiệu** - Thông tin công ty
 
-## 🛠️ Technology Stack
+## 🛠️ Công nghệ sử dụng
 
-- **Astro**: Static site generator for optimal performance
-- **Tailwind CSS**: Utility-first CSS framework
-- **TypeScript**: Type-safe development
-- **Service Worker**: Offline caching and performance
-- **Structured Data**: Rich snippets for search engines
+- **Astro** - Static Site Generator
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Styling
+- **JSON** - Data source
 
-## 📁 Project Structure
+## 📁 Cấu trúc project
 
 ```
 src/
-├── components/          # Reusable UI components
-│   ├── Header.astro
-│   ├── Footer.astro
-│   ├── Hero.astro
+├── components/          # Components tái sử dụng
 │   ├── FeaturedTrucks.astro
 │   ├── Features.astro
-│   ├── TruckCard.astro
-│   ├── TruckFilters.astro
-│   └── OptimizedImage.astro
-├── data/               # Data files
-│   └── trucks.ts
-├── layouts/            # Page layouts
-│   └── Layout.astro
-├── pages/              # Pages and routes
-│   ├── index.astro
+│   ├── Footer.astro
+│   ├── Header.astro
+│   ├── Hero.astro
+│   └── TruckCard.astro
+├── data/
+│   └── trucksData.ts    # Data management
+├── layouts/
+│   └── Layout.astro     # Layout chính
+├── pages/              # Các trang
 │   ├── about.astro
 │   ├── contact.astro
-│   ├── trucks/
-│   │   ├── index.astro
-│   │   └── [id].astro
-│   ├── sitemap.xml
-│   └── robots.txt
-├── scripts/            # JavaScript files
-│   └── lazy-loading.js
-└── styles/             # CSS files
+│   ├── index.astro
+│   └── trucks/
+│       ├── [id].astro
+│       └── index.astro
+└── styles/
     ├── global.css
     └── responsive.css
-public/                 # Static assets
-├── favicon.svg
-├── logo.svg
-└── sw.js
 ```
 
-## 🚀 Getting Started
+## 🚀 Cài đặt và chạy
 
-### Prerequisites
-
-- Node.js 18+ 
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd truck-sales-website
-```
-
-2. Install dependencies:
+### 1. Cài đặt dependencies
 ```bash
 npm install
 ```
 
-3. Start the development server:
+### 2. Chạy development server
 ```bash
 npm run dev
 ```
 
-4. Open [http://localhost:4321](http://localhost:4321) in your browser.
-
-### Build for Production
-
+### 3. Build production
 ```bash
 npm run build
 ```
 
-The built files will be in the `dist/` directory.
+### 4. Preview production build
+```bash
+npm run preview
+```
 
-## 📱 Responsive Design
+## 📊 Quản lý dữ liệu
 
-The website is built with a mobile-first approach and includes:
+### Thêm xe tải mới
 
-- Responsive navigation with mobile menu
-- Touch-friendly buttons and links
-- Optimized images for different screen sizes
-- Flexible grid layouts
-- Dark mode support
+1. **Mở file `api-test.json`**
+2. **Tìm phần `cars` array**
+3. **Chọn danh mục phù hợp** (VD: "TẢI NHẸ MÁY XĂNG THACO TOWNER")
+4. **Thêm xe mới vào `car` array:**
 
-## 🔍 SEO Features
-
-- **Meta Tags**: Comprehensive meta tags for all pages
-- **Structured Data**: JSON-LD structured data for rich snippets
-- **Sitemap**: Automatic XML sitemap generation
-- **Robots.txt**: Search engine crawling instructions
-- **Open Graph**: Social media sharing optimization
-- **Canonical URLs**: Duplicate content prevention
-
-## ⚡ Performance Optimizations
-
-- **Lazy Loading**: Images load only when needed
-- **Service Worker**: Offline caching and faster loading
-- **Image Optimization**: Optimized images with proper sizing
-- **Minification**: CSS and JavaScript minification
-- **Critical CSS**: Inline critical CSS for faster rendering
-
-## 🎨 Customization
-
-### Adding New Trucks
-
-Edit `src/data/trucks.ts` to add new truck listings:
-
-```typescript
+```json
 {
-  id: 7,
-  title: "New Truck Model",
-  brand: "Brand",
-  model: "Model",
-  price: 1000000000,
-  // ... other properties
+  "id": 89,
+  "name": "Towner 900A - Thùng Kín",
+  "slug": "towner-900a-thung-kin",
+  "brand": "THACO TRUCK",
+  "vehicleType": "TOWNER TẢI",
+  "filterCategory": "Tải nhẹ máy xăng",
+  "basic_specification": [
+    {
+      "title": "Tải trọng",
+      "value": "1.25 tấn"
+    },
+    {
+      "title": "Thùng (DxRxC)",
+      "value": "2200 x 1330 x 285 mm"
+    }
+  ],
+  "image": "https://thacotai.vn/storage/hinh-anh-xe/towner/towner-900a-thung-kin-800x800.jpg",
+  "weight": 1.25
 }
 ```
 
-### Styling
+5. **Cập nhật `carsCount`** của danh mục
+6. **Lưu file và chạy `npm run build`**
 
-The website uses Tailwind CSS. Customize colors and styles in:
-- `tailwind.config.mjs` - Tailwind configuration
-- `src/styles/global.css` - Global styles
-- `src/styles/responsive.css` - Responsive utilities
+### Cấu trúc dữ liệu
 
-### SEO Configuration
+- **`brands`** - Danh sách hãng xe
+- **`cars`** - Danh sách xe tải theo danh mục
+- **`listCategories`** - Danh mục lọc
+- **`load`** - Tải trọng
+- **`price`** - Giá xe
 
-Update SEO settings in:
-- `astro.config.mjs` - Site URL and configuration
-- `src/layouts/Layout.astro` - Default meta tags
-- Individual page files for page-specific SEO
+## 🎨 Customization
 
-## 📊 Analytics and Monitoring
+### Thay đổi màu sắc
+Chỉnh sửa file `tailwind.config.mjs`:
 
-To add analytics:
+```javascript
+theme: {
+  extend: {
+    colors: {
+      primary: {
+        50: '#eff6ff',
+        500: '#3b82f6',
+        600: '#2563eb',
+        700: '#1d4ed8',
+      }
+    }
+  }
+}
+```
 
-1. Add Google Analytics or other tracking code to `src/layouts/Layout.astro`
-2. Configure search console verification
-3. Set up performance monitoring
+### Thêm component mới
+1. Tạo file trong `src/components/`
+2. Import và sử dụng trong các trang
 
-## 🚀 Deployment
+## 📱 Responsive Design
 
-### Netlify (Recommended)
+Website được thiết kế responsive cho:
+- 📱 Mobile (320px+)
+- 📱 Tablet (768px+)
+- 💻 Desktop (1024px+)
 
-1. Connect your repository to Netlify
-2. Set build command: `npm run build`
-3. Set publish directory: `dist`
-4. Deploy!
+## 🔧 Scripts
 
-### Vercel
-
-1. Connect your repository to Vercel
-2. Vercel will automatically detect Astro
-3. Deploy!
-
-### Other Static Hosts
-
-The built `dist/` folder can be deployed to any static hosting service:
-- GitHub Pages
-- AWS S3 + CloudFront
-- Firebase Hosting
-- Surge.sh
-
-## 📈 Performance Metrics
-
-Expected performance scores:
-- **Lighthouse Performance**: 95+
-- **Lighthouse SEO**: 100
-- **Lighthouse Accessibility**: 95+
-- **Lighthouse Best Practices**: 95+
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
+- `npm run dev` - Chạy development server
+- `npm run build` - Build production
+- `npm run preview` - Preview production build
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+MIT License - Xem file LICENSE để biết thêm chi tiết.
 
-## 📞 Support
+## 🤝 Contributing
 
-For support or questions:
-- Email:  lethanhtuan@thaco.com.vn
-- Phone: 0900.xxx.xxx
+1. Fork project
+2. Tạo feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to branch (`git push origin feature/AmazingFeature`)
+5. Tạo Pull Request
+
+## 📞 Liên hệ
+
+- **Website**: [TruckSales.com](http://localhost:4324)
+- **Email**: info@trucksales.com
+- **Phone**: 0936777735
 
 ---
 
-Built with ❤️ using Astro and modern web technologies.
+Made with ❤️ by TruckSales Team
