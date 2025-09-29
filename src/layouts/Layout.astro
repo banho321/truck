@@ -1,4 +1,6 @@
 ---
+import FloatingSocial from '../components/FloatingSocial.astro';
+
 export interface Props {
   title: string;
   description: string;
@@ -72,5 +74,6 @@ const canonicalURL = new URL(canonical || Astro.url.pathname, Astro.site);
   </head>
   <body class="font-sans antialiased">
     <slot />
+    <FloatingSocial />
   </body>
 </html>
