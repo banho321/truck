@@ -2,9 +2,11 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import { getAllTrucks, getSpecValue } from '../../data/trucksData';
+import { getAllTrucks, getSpecValue, loadTrucksData } from '../../data/trucksData';
 
 export async function getStaticPaths() {
+  // Ensure data is loaded at build time before generating paths
+  loadTrucksData();
   const trucks = getAllTrucks();
   return trucks.map((truck) => ({
     params: { id: truck.id.toString() },
